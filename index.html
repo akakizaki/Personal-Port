@@ -10,6 +10,25 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <script>
+    if (sessionStorage.getItem('site-unlocked') === 'true') {
+      document.body.classList.add('unlocked');
+    }
+  </script>
+
+  <!-- LOCK SCREEN -->
+  <div id="lock-screen" class="lock-screen">
+    <div class="lock-box">
+      <p class="lock-prompt"><span class="gh-prompt">&gt;_</span> enter password<span class="gh-cursor">|</span></p>
+      <form id="lock-form" class="lock-form" autocomplete="off">
+        <input type="password" id="lock-input" class="lock-input" placeholder="••••••••" autofocus />
+        <button type="submit" class="lock-btn">unlock →</button>
+      </form>
+      <p id="lock-error" class="lock-error"></p>
+    </div>
+  </div>
+
+  <div class="site-content">
 
   <!-- NAV -->
   <nav>
@@ -219,6 +238,8 @@
     <span>© 2026 aya kakizaki</span>
     <span class="mono gh-footer-code">/* designed &amp; built with care */</span>
   </footer>
+
+  </div>
 
   <script src="script.js"></script>
 </body>

@@ -509,6 +509,85 @@ footer span {
   transform: none;
 }
 
+/* ── LOCK SCREEN ── */
+.lock-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+}
+
+body.unlocked .lock-screen { display: none; }
+
+.site-content { display: none; }
+body.unlocked .site-content { display: block; }
+
+.lock-box {
+  width: 100%;
+  max-width: 360px;
+  padding: 0 24px;
+}
+
+.lock-prompt {
+  font-size: 16px;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+
+.lock-form {
+  display: flex;
+  gap: 10px;
+}
+
+.lock-input {
+  flex: 1;
+  min-width: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 14px;
+  color: var(--text);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.lock-input:focus { border-color: var(--muted); }
+
+.lock-btn {
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  transition: background 0.2s;
+}
+
+.lock-btn:hover { background: var(--accent); }
+
+.lock-error {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #e5484d;
+  min-height: 16px;
+}
+
+@keyframes lock-shake {
+  10%, 90% { transform: translateX(-1px); }
+  20%, 80% { transform: translateX(2px); }
+  30%, 50%, 70% { transform: translateX(-4px); }
+  40%, 60% { transform: translateX(4px); }
+}
+
+.lock-screen.shake .lock-box { animation: lock-shake 0.4s; }
+
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
   nav { padding: 18px 24px; }
