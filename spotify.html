@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spotify Case Study — aya kakizaki</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="project.css" />
+  <link rel="stylesheet" href="spotify.css" />
+</head>
+<body class="project-page">
+
+  <!-- NAV -->
+  <nav class="scrolled">
+    <a href="index.html" class="nav-name">&gt;_aya kakizaki</a>
+    <ul class="nav-links">
+      <li><a href="index.html#work">work</a></li>
+      <li><a href="about.html">about</a></li>
+      <li><a href="resume.pdf" target="_blank">resume</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO BANNER -->
+  <div class="proj-hero spotify-hero">
+    <img
+      src="assets/spotify/spotify-hero.png"
+      alt="Spotify Case Study"
+      class="proj-hero-img"
+      onerror="this.style.display='none'"
+    />
+   
+    <div class="proj-hero-overlay"></div>
+  </div>
+
+  <!-- PROJECT HEADER -->
+  <div class="proj-header">
+    <div class="proj-header-inner">
+      <div class="proj-back">
+        <a href="index.html">← back</a>
+      </div>
+      <div class="proj-tags">
+        <span>Figma</span>
+        <span>UX Research</span>
+        <span>Prototyping</span>
+        <span>Product Design</span>
+      </div>
+      <h1 class="proj-title">Spotify Case Study</h1>
+      <p class="proj-subtitle">Improve user experience by integrating social components into Spotify's mobile app</p>
+
+      <div class="proj-meta-row">
+        <div class="proj-meta-item">
+          <span class="meta-label">Role</span>
+          <span class="meta-value">UX Designer, Prototyper, UX Researcher</span>
+        </div>
+        <div class="proj-meta-item">
+          <span class="meta-label">Tools</span>
+          <span class="meta-value">Figma, Adobe Photoshop</span>
+        </div>
+        <div class="proj-meta-item">
+          <span class="meta-label">Duration</span>
+          <span class="meta-value">Jan 2025 – April 2025 (1 semester)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="proj-body">
+
+    <!-- STICKY TOC -->
+    <aside class="proj-toc">
+      <nav class="toc-nav">
+        <a href="#problem"           class="toc-link" data-section="problem">Problem</a>
+        <a href="#initial-research"  class="toc-link" data-section="initial-research">Initial Research</a>
+        <a href="#user-testing"      class="toc-link" data-section="user-testing">User Testing</a>
+        <a href="#problem-statement" class="toc-link" data-section="problem-statement">Problem Statement</a>
+        <a href="#design-process"    class="toc-link" data-section="design-process">Design Process</a>
+        <a href="#solution"          class="toc-link" data-section="solution">Solution</a>
+        <a href="#measuring-success" class="toc-link" data-section="measuring-success">Measuring Success</a>
+      </nav>
+    </aside>
+
+    <!-- CONTENT -->
+    <main class="proj-content">
+
+      <section id="problem" class="cs-section">
+        <div class="cs-section-label">Problem</div>
+        <h2 class="cs-heading">The social gap in the world's biggest music app</h2>
+        <p>Spotify is the world's largest music streaming provider, yet a key feature — <strong>Friends Activity</strong> — is available exclusively on the desktop client. For the majority of Spotify's 381 million monthly active users who primarily use the mobile application, the social dimension of music discovery is missing.</p>
+        <p>As a daily user of the desktop application, I recognized the value of seeing friends' real-time listening. However, the mobile experience forces users into clumsy workarounds — sending song links via iMessage or posting updates on Instagram — just to share music.</p>
+
+        <div class="cs-callout">
+          <span class="callout-label">Context</span>
+          <p>Spotify's <strong>Friends Activity</strong> sidebar has existed on desktop for years, yet it's completely absent on mobile — where most users spend the majority of their listening time.</p>
+        </div>
+
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/proto/9xfe8UQnXcJbdYszgusFSY/Untitled?node-id=1-63&starting-point-node-id=1%3A63&embed-host=share" allowfullscreen></iframe>
+
+      
+      </section>
+
+      <section id="initial-research" class="cs-section">
+        <div class="cs-section-label">Initial Research</div>
+        <h2 class="cs-heading">Validating a long-standing user pain point</h2>
+        <p>To validate this issue as a significant user pain point, I began with <strong>secondary research</strong> on community posts across Reddit and Spotify's official forums. The research revealed a consistent, long-standing user frustration.</p>
+
+        <div class="cs-insights">
+          <div class="insight-item">
+            <span class="insight-num">01</span>
+            <div>
+              <strong>Repetitive requests</strong>
+              <p>Users repeatedly asked why the Friends Activity feature wasn't available on mobile, with threads dating back years.</p>
+            </div>
+          </div>
+          <div class="insight-item">
+            <span class="insight-num">02</span>
+            <div>
+              <strong>Frustrated workarounds</strong>
+              <p>Many users expressed frustration with needing external apps (iMessage, Instagram) to share what they were listening to.</p>
+            </div>
+          </div>
+          <div class="insight-item">
+            <span class="insight-num">03</span>
+            <div>
+              <strong>Critical unaddressed pain point</strong>
+              <p>The missing feature was not a minor request — it was actively impeding the natural social sharing behavior of music fans.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="user-testing" class="cs-section">
+        <div class="cs-section-label">User Testing</div>
+        <h2 class="cs-heading">Confirming what users actually need</h2>
+        <p>To supplement the secondary research, I conducted user interviews and usability sessions with active Spotify mobile users. Participants were observed navigating the current app while being asked to share music with a friend.</p>
+
+        <div class="cs-findings">
+          <div class="finding">
+            <div class="finding-header">
+              <span class="finding-icon" style="color:#1DB954">✓</span>
+              <strong>Social sharing is habitual</strong>
+            </div>
+            <p>All participants reported sharing music with friends weekly — but always through external apps, never inside Spotify.</p>
+          </div>
+          <div class="finding">
+            <div class="finding-header">
+              <span class="finding-icon">⚠</span>
+              <strong>Broken discovery flow</strong>
+            </div>
+            <p>When a friend shared a song link via iMessage, opening it in Spotify broke the user's current listening context.</p>
+          </div>
+          <div class="finding">
+            <div class="finding-header">
+              <span class="finding-icon">⚠</span>
+              <strong>Invisible social graph</strong>
+            </div>
+            <p>Users had no idea what their friends were listening to in real time, making spontaneous music discovery impossible.</p>
+          </div>
+          <div class="finding">
+            <div class="finding-header">
+              <span class="finding-icon" style="color:#1DB954">✓</span>
+              <strong>High feature appeal</strong>
+            </div>
+            <p>When shown the desktop Friends Activity feature, every participant immediately expressed they'd want this on mobile.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="problem-statement" class="cs-section">
+        <div class="cs-section-label">Problem Statement</div>
+        <h2 class="cs-heading">How might we make music social on mobile?</h2>
+
+        <div class="cs-callout highlight">
+          <span class="callout-label">HMW Statement</span>
+          <p>How might Spotify better integrate and improve its social component on mobile to help users <strong>connect, share, and discover music</strong> through their friends, anytime, anywhere?</p>
+        </div>
+
+        <p>The core tension: Spotify's strength is personalization, but music has always been inherently social. The mobile experience needed to bridge these two without disrupting the existing listening experience users loved.</p>
+      </section>
+
+      <section id="design-process" class="cs-section">
+        <div class="cs-section-label">Ideation & Design Process</div>
+        <h2 class="cs-heading">From sketches to a social architecture</h2>
+
+        <div class="cs-improvements">
+          <div class="improvement-item">
+            <div class="improvement-number">01</div>
+            <div class="improvement-content">
+              <strong>Defining the feature</strong>
+              <p>Before sketching, I brainstormed the core interactions the feature needed to support — <strong>real-time activity</strong> (see what friends are listening to now) and <strong>passive discovery</strong> (browse what friends have been listening to).</p>
+            </div>
+          </div>
+          <div class="improvement-item">
+            <div class="improvement-number">02</div>
+            <div class="improvement-content">
+              <strong>Navigation placement</strong>
+              <p>I explored two concepts: integrating with the Search tab (a discovery-adjacent space) vs. creating a dedicated page. Key insight: Spotify's existing path to see friends was <em>Home → Settings → Profile → Following list → Friend's profile</em> — far too buried for a social-first feature.</p>
+              <p><strong>Decision:</strong> A dedicated "Friends" tab in the main bottom navigation bar, given equal weighting to Home, Search, and Library.</p>
+            </div>
+          </div>
+          <div class="improvement-item">
+            <div class="improvement-number">03</div>
+            <div class="improvement-content">
+              <strong>Layout exploration</strong>
+              <p>I explored two layout directions — a desktop-inspired dual-tab (Activity + Feed) and a social-media-inspired single scrollable feed. I ran a quick voting session with classmates to gather feedback and landed on a hybrid approach.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cs-image-grid two-col">
+          <figure>
+            <img src="assets/spotify/initialsketch.png" alt="Initial sketches" onerror="this.src='https://placehold.co/540x380/0f0f0f/333?text=Initial+Sketches'" />
+            <figcaption>// initial sketches and brainstorming</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/spotify/wireframe.png" alt="Information architecture" onerror="this.src=''" />
+            <figcaption>// mid-fidelity of friend's feature</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="solution" class="cs-section">
+        <div class="cs-section-label">The Solution</div>
+        <h2 class="cs-heading">A dedicated social hub — the Friends tab</h2>
+        <p>The final solution introduces a <strong>dedicated "Friends" tab</strong> in the main bottom navigation bar, offering three integrated social components that cover the full range of social music behavior.</p>
+
+        <div class="spotify-feature-grid">
+          <div class="spotify-feature">
+            <div class="feature-num">1</div>
+            <div class="feature-body">
+              <strong>Activity</strong>
+              <p>Real-time listening updates — see exactly what friends are playing right now, with one-tap to listen along.</p>
+            </div>
+          </div>
+          <div class="spotify-feature">
+            <div class="feature-num">2</div>
+            <div class="feature-body">
+              <strong>Feed</strong>
+              <p>Passive discovery — a scrollable update stream of new playlists, liked songs, and albums friends have saved.</p>
+            </div>
+          </div>
+          <div class="spotify-feature">
+            <div class="feature-num">3</div>
+            <div class="feature-body">
+              <strong>Messages</strong>
+              <p>In-app sharing — send songs, playlists, and reactions directly to friends without leaving Spotify.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cs-image-grid one-col">
+          <figure>
+            <img src="assets/spotify/sketch2.png" alt="Spotify Friends tab solution" onerror="this.src='https://placehold.co/780x460/0f0f0f/1DB954?text=Friends+Tab+High-Fidelity+Prototype'" />
+            <figcaption>// mid-fidelity design of Friends tab with Activity, Feed, and Messages</figcaption>
+          </figure>
+        </div>
+
+        <h3 class="cs-subheading">The Stories component</h3>
+        <p>A <strong>story-like carousel</strong> was added at the top of the page — similar to established social platforms — to make music sharing feel casual and instantly familiar. Stories appear across all three tabs to reinforce real-time friend activity as the core of the social experience.</p>
+
+        <div class="spotify-table">
+          <div class="table-header">
+            <span>Feature</span>
+            <span>Goal</span>
+          </div>
+          <div class="table-row">
+            <span>Activity section</span>
+            <span>Real-time listening updates for connection.</span>
+          </div>
+          <div class="table-row">
+            <span>Friend feed</span>
+            <span>Passive, scrollable updates for discovery of new playlists and liked songs.</span>
+          </div>
+          <div class="table-row">
+            <span>Message section</span>
+            <span>A casual and direct way to send songs and react to music inside the app.</span>
+          </div>
+          <div class="table-row">
+            <span>Quick add button</span>
+            <span>Simplifies adding new friends without digging into Settings.</span>
+          </div>
+          <div class="table-row">
+            <span>List / gallery view</span>
+            <span>Gives users control over how they browse friend content.</span>
+          </div>
+          <div class="table-row">
+            <span>Sorting options</span>
+            <span>Personalization by "most recent activity" or "closest connections."</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="measuring-success" class="cs-section">
+        <div class="cs-section-label">Measuring Success</div>
+        <h2 class="cs-heading">What did users think?</h2>
+        <p>As a university project, success was measured through qualitative data collected during <strong>think-aloud sessions</strong> with participants who tested the high-fidelity Figma prototype. I focused on three areas:</p>
+
+        <div class="cs-results-grid">
+          <div class="result-card">
+            <span class="result-icon">✓</span>
+            <strong>Usability & Navigation</strong>
+            <p>All participants completed core tasks — viewing the activity feed and sending a song — <strong>without any guidance</strong>. The dedicated Friends tab was immediately intuitive.</p>
+          </div>
+          <div class="result-card">
+            <span class="result-icon">✦</span>
+            <strong>Feature Value</strong>
+            <p>Feedback on social features (real-time updates, Stories, messages) was <strong>overwhelmingly positive</strong>. Participants described the experience as "fun and natural."</p>
+          </div>
+          <div class="result-card">
+            <span class="result-icon">↑</span>
+            <strong>Engagement Intent</strong>
+            <p>Every participant stated they would use the Friends tab <strong>daily</strong>, and several expressed surprise that Spotify didn't already offer this on mobile.</p>
+          </div>
+          <div class="result-card">
+            <span class="result-icon">↑</span>
+            <strong>Reduced Friction</strong>
+            <p>The in-app messaging eliminated the need to switch to iMessage or Instagram to share music — the primary pain point users reported at the start.</p>
+          </div>
+        </div>
+
+        <div class="cs-callout highlight">
+          <span class="callout-label">Key Takeaway</span>
+          <p>By bringing the social layer into mobile, the Friends tab turns Spotify from a personal listening tool into a shared music experience — without compromising what makes the app great.</p>
+        </div>
+      </section>
+
+      <!-- NEXT PROJECT -->
+      <div class="proj-next">
+        <span class="proj-next-label">next project</span>
+        <a href="#" class="proj-next-link">
+          Language Trends <span>→</span>
+        </a>
+      </div>
+
+    </main>
+  </div>
+
+  <footer>
+    <span>© 2026 aya kakizaki</span>
+    <span>designed & built with care</span>
+  </footer>
+
+  <script src="project.js"></script>
+</body>
+</html>

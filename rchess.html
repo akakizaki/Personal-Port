@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>r/Chess — aya kakizaki</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="project.css" />
+  <link rel="stylesheet" href="rchess.css" />
+</head>
+<body class="project-page">
+
+  <!-- NAV -->
+  <nav class="scrolled">
+    <a href="index.html" class="nav-name">&gt;_aya kakizaki</a>
+    <ul class="nav-links">
+      <li><a href="index.html#work">work</a></li>
+      <li><a href="about.html">about</a></li>
+      <li><a href="resume.pdf" target="_blank">resume</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO BANNER -->
+  <div class="proj-hero rc-hero">
+    <img src="assets/rchess.jpg" alt="r/Chess" class="proj-hero-img" onerror="this.style.display='none'" />
+    <div class="rc-hero-content">
+      <div class="rc-board-grid" aria-hidden="true"></div>
+      <div class="rc-hero-text">
+        <span class="rc-subreddit">r/Chess</span>
+        <span class="rc-stat">~500k members</span>
+      </div>
+    </div>
+    <div class="proj-hero-overlay"></div>
+  </div>
+
+  <!-- PROJECT HEADER -->
+  <div class="proj-header">
+    <div class="proj-header-inner">
+      <div class="proj-back"><a href="index.html">← back</a></div>
+      <div class="proj-tags">
+        <span>UX Research</span>
+        <span>Qualitative Analysis</span>
+        <span>Community Design</span>
+        <span>Ethnography</span>
+      </div>
+      <h1 class="proj-title">r/Chess Community Study</h1>
+      <p class="proj-subtitle">What Makes Knowledge-Based Communities Successful — a deep-dive into Reddit's largest chess community</p>
+
+      <div class="proj-meta-row">
+        <div class="proj-meta-item">
+          <span class="meta-label">Role</span>
+          <span class="meta-value">UX Researcher</span>
+        </div>
+        <div class="proj-meta-item">
+          <span class="meta-label">Methods</span>
+          <span class="meta-value">Qualitative Analysis, Data Collection, Theoretical Frameworks</span>
+        </div>
+        <div class="proj-meta-item">
+          <span class="meta-label">Duration</span>
+          <span class="meta-value">Jan 2022 – May 2022</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="proj-body">
+
+    <!-- STICKY TOC -->
+    <aside class="proj-toc">
+      <nav class="toc-nav">
+        <a href="#overview"     class="toc-link" data-section="overview">Overview</a>
+        <a href="#methodology"  class="toc-link" data-section="methodology">Methodology</a>
+        <a href="#user-testing" class="toc-link" data-section="user-testing">User Testing</a>
+        <a href="#key-findings" class="toc-link" data-section="key-findings">Key Findings</a>
+        <a href="#impact"       class="toc-link" data-section="impact">Impact</a>
+      </nav>
+    </aside>
+
+    <!-- CONTENT -->
+    <main class="proj-content">
+
+      <!-- OVERVIEW -->
+      <section id="overview" class="cs-section">
+        <div class="cs-section-label">Overview</div>
+        <h2 class="cs-heading">What makes a knowledge-based<br>community actually work?</h2>
+
+        <p>Online communities thrive when they balance knowledge-sharing, inclusivity, and engagement. This study explored <strong>r/Chess</strong> — Reddit's largest chess community with nearly half a million members — to understand how it fosters meaningful interaction across varying skill levels.</p>
+        <p>The project framed r/Chess as both a <em>knowledge-based community</em> and a <em>"third place"</em> (Oldenburg), applying <strong>Amy Jo Kim's 9 principles of community design</strong> as a lens. The research examined how design choices, social norms, and platform affordances influence participation, belonging, and learning.</p>
+
+        <div class="cs-callout">
+          <span class="callout-label">Research Goal</span>
+          <p>Identify the affordances and behaviors that make technical hobbyist communities like r/Chess successful — and extract insights that can inform UX design for online platforms.</p>
+        </div>
+
+        <div class="rc-framework">
+          <div class="rc-framework-label mono">// theoretical_frameworks</div>
+          <div class="rc-framework-grid">
+            <div class="rc-framework-item">
+              <strong>Amy Jo Kim's 9 Principles</strong>
+              <p>Community design framework covering purpose, roles, rituals, and subgroups.</p>
+            </div>
+            <div class="rc-framework-item">
+              <strong>Third Place Theory</strong>
+              <p>Oldenburg's concept of informal gathering spaces that foster belonging outside home and work.</p>
+            </div>
+            <div class="rc-framework-item">
+              <strong>Communities of Practice</strong>
+              <p>Wenger's theory on how shared learning and identity develop within expert communities.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cs-insights">
+          <div class="insight-item">
+            <span class="insight-num">01</span>
+            <div>
+              <strong>Inclusive onboarding</strong>
+              <p>r/Chess integrates newcomers through improvement guides, resources, and low-pressure lurking — lowering the barrier for beginners to engage.</p>
+            </div>
+          </div>
+          <div class="insight-item">
+            <span class="insight-num">02</span>
+            <div>
+              <strong>Diverse audience, shared purpose</strong>
+              <p>Despite spanning ELO 600 beginners to 2300+ advanced players, a shared passion for chess creates cohesion across wildly different goals.</p>
+            </div>
+          </div>
+          <div class="insight-item">
+            <span class="insight-num">03</span>
+            <div>
+              <strong>Design affordances drive engagement</strong>
+              <p>Embedded media (Twitch, YouTube), flairs, and bots like chess-vision-ai create instant anchors for discussion and signal expertise organically.</p>
+            </div>
+          </div>
+        </div>
+
+        <p>The full research report can be found <a href="https://drive.google.com/file/d/172_V7UIehLSbprCwZ25bHDfy-6ynY5eK/view?usp=sharing" class="inline-link">here →</a></p>
+      </section>
+
+      <!-- METHODOLOGY -->
+      <section id="methodology" class="cs-section">
+        <div class="cs-section-label">Methodology</div>
+        <h2 class="cs-heading">Immersing in the community to understand it</h2>
+
+        <p>As a team, we <strong>joined the subreddit to immerse ourselves in the community</strong>, observing who the most active contributors and moderators were. This approach helped us identify potential participants organically, understand community norms, and build credibility before reaching out.</p>
+
+        <div class="cs-improvements">
+          <div class="improvement-item">
+            <div class="improvement-number">01</div>
+            <div class="improvement-content">
+              <strong>Ethnographic observation</strong>
+              <p>Analyzed post content, comment engagement, and moderation practices. Captured patterns of participation across tournaments, puzzles, and casual discussions over several weeks.</p>
+            </div>
+          </div>
+          <div class="improvement-item">
+            <div class="improvement-number">02</div>
+            <div class="improvement-content">
+              <strong>Semi-structured interviews</strong>
+              <p>Conducted <strong>6 in-depth interviews</strong> with community members ranging from beginners (ELO ~600) to near-expert players (ELO 2300). Captured motivations, barriers to participation, and perceptions of inclusivity.</p>
+            </div>
+          </div>
+          <div class="improvement-item">
+            <div class="improvement-number">03</div>
+            <div class="improvement-content">
+              <strong>Comparative analysis</strong>
+              <p>Benchmarked r/Chess against other chess communities (Chess.com, Lichess, ICC). Applied Amy Jo Kim's timeless design principles and <em>Communities of Practice</em> theory (Wenger) to evaluate success factors.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- USER TESTING / RECRUITMENT -->
+      <section id="user-testing" class="cs-section">
+        <div class="cs-section-label">User Testing / Recruitment</div>
+        <h2 class="cs-heading">Reaching participants across the skill spectrum</h2>
+
+        <p>Participants were <strong>recruited directly from the r/Chess community</strong> through outreach messages and subreddit participation. We applied purposeful sampling to capture a range of skill levels.</p>
+
+        <div class="rc-participants">
+          <div class="rc-participants-label mono">// participant_criteria</div>
+          <div class="rc-criteria-grid">
+            <div class="rc-criterion">
+              <span class="rc-criterion-icon">✓</span>
+              <span>Age 18+ (ethical requirement)</span>
+            </div>
+            <div class="rc-criterion">
+              <span class="rc-criterion-icon">✓</span>
+              <span>Active or semi-active r/Chess users</span>
+            </div>
+            <div class="rc-criterion">
+              <span class="rc-criterion-icon">✓</span>
+              <span>Variation in posting vs. lurking frequency</span>
+            </div>
+            <div class="rc-criterion">
+              <span class="rc-criterion-icon">✓</span>
+              <span>Diverse demographics, genders, experience levels</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="rc-elo-range">
+          <div class="rc-elo-label mono">// elo_range_sampled</div>
+          <div class="rc-elo-bar">
+            <div class="rc-elo-track">
+              <div class="rc-elo-fill"></div>
+              <span class="elo-start">ELO 600</span>
+              <span class="elo-end">ELO 2300</span>
+            </div>
+            <p class="rc-elo-note">Final sample: <strong>6 participants</strong> — beginner to near-expert</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- KEY FINDINGS -->
+      <section id="key-findings" class="cs-section">
+        <div class="cs-section-label">Key Findings</div>
+        <h2 class="cs-heading">Six patterns that make r/Chess work</h2>
+
+        <div class="rc-findings-list">
+          <div class="rc-finding">
+            <div class="rc-finding-num">01</div>
+            <div class="rc-finding-body">
+              <strong>Inclusive Onboarding and Knowledge Sharing</strong>
+              <p>r/Chess integrates new players through improvement guides, resources, and friendly interactions. Newcomers valued being able to lurk without pressure, while experienced members provided mentorship in comment threads.</p>
+            </div>
+          </div>
+          <div class="rc-finding">
+            <div class="rc-finding-num">02</div>
+            <div class="rc-finding-body">
+              <strong>Diverse Audience, Shared Purpose</strong>
+              <p>Users span a wide range of skill levels and demographics. Despite different goals (learning tactics, following tournaments, casual entertainment), a shared passion for chess creates cohesion.</p>
+            </div>
+          </div>
+          <div class="rc-finding">
+            <div class="rc-finding-num">03</div>
+            <div class="rc-finding-body">
+              <strong>Cyclical Engagement through Events</strong>
+              <p>Activity spikes around major tournaments (e.g., Candidates, World Championship). Stickied threads and prediction polls serve as recurring rituals that sustain participation between events.</p>
+            </div>
+          </div>
+          <div class="rc-finding">
+            <div class="rc-finding-num">04</div>
+            <div class="rc-finding-body">
+              <strong>Flexible but Clear Code of Conduct</strong>
+              <p>Moderators enforce rules around spoilers, attribution, and anti-cheating, while still allowing diverse media (Twitch clips, YouTube recaps, memes). This balance fosters trust, fairness, and creative participation.</p>
+            </div>
+          </div>
+          <div class="rc-finding">
+            <div class="rc-finding-num">05</div>
+            <div class="rc-finding-body">
+              <strong>Profiles & Roles Evolve Organically</strong>
+              <p>Unlike traditional role systems, user roles emerge through expertise and confidence. High-ELO players gain credibility and influence via flairs, reinforcing status dynamics without formal gatekeeping.</p>
+            </div>
+          </div>
+          <div class="rc-finding">
+            <div class="rc-finding-num">06</div>
+            <div class="rc-finding-body">
+              <strong>Design Affordances Drive Engagement</strong>
+              <p>Embedded media (Twitch, Twitter, YouTube) keeps discussions current. Bots like chess-vision-ai streamline puzzle-solving and create instant discussion anchors that require no moderation effort.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- IMPACT -->
+      <section id="impact" class="cs-section">
+        <div class="cs-section-label">Impact and UX Insights</div>
+        <h2 class="cs-heading">What this means for designing online communities</h2>
+
+        <div class="cs-results-grid">
+          <div class="result-card">
+            <span class="result-icon rc-gold">♟</span>
+            <strong>Onboarding & Inclusivity</strong>
+            <p>Lightweight participation modes (lurking, polls, low-stakes posts) lower barriers for newcomers — a pattern applicable to any expert community platform.</p>
+          </div>
+          <div class="result-card">
+            <span class="result-icon rc-gold">↻</span>
+            <strong>Recurring Rituals</strong>
+            <p>Cyclical events sustain long-term engagement without requiring constant novelty — schedulable community anchors are more durable than one-off campaigns.</p>
+          </div>
+          <div class="result-card">
+            <span class="result-icon rc-gold">✦</span>
+            <strong>Role Recognition</strong>
+            <p>Affordances like flairs or visible achievements motivate experts to contribute knowledge — status signals that emerge from behavior, not titles.</p>
+          </div>
+          <div class="result-card">
+            <span class="result-icon rc-gold">⇄</span>
+            <strong>Structure & Flexibility</strong>
+            <p>A malleable code of conduct supports trust while allowing creativity — over-moderation stifles the casual culture that makes third places feel welcoming.</p>
+          </div>
+        </div>
+
+        <div class="cs-callout highlight">
+          <span class="callout-label">Broader Application</span>
+          <p>These insights apply beyond chess — they're useful for designing <strong>learning platforms, knowledge-sharing apps, and technical communities</strong> where users vary widely in expertise. The design question isn't "how do we serve experts?" but "how do we make experts want to serve beginners?"</p>
+        </div>
+      </section>
+
+      <!-- NEXT PROJECT -->
+      <div class="proj-next">
+        <span class="proj-next-label">next project</span>
+        <a href="spotify.html" class="proj-next-link">
+          Spotify Case Study <span>→</span>
+        </a>
+      </div>
+
+    </main>
+  </div>
+
+  <footer>
+    <span>© 2026 aya kakizaki</span>
+    <span class="mono gh-footer-code">/* designed &amp; built with care */</span>
+  </footer>
+
+  <script src="project.js"></script>
+  <script>
+    // Build chess board decoration
+    const grid = document.querySelector('.rc-board-grid');
+    if (grid) {
+      for (let row = 0; row < 4; row++) {
+        for (let col = 0; col < 8; col++) {
+          const cell = document.createElement('div');
+          cell.className = 'rc-board-cell ' + ((row + col) % 2 === 0 ? 'light' : 'dark');
+          grid.appendChild(cell);
+        }
+      }
+    }
+  </script>
+</body>
+</html>
