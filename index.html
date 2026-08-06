@@ -11,7 +11,8 @@
 </head>
 <body>
   <script>
-    if (sessionStorage.getItem('site-unlocked') === 'true') {
+    window.SITE_LOCK_ENABLED = false; // set to true to re-enable the password gate
+    if (!window.SITE_LOCK_ENABLED || sessionStorage.getItem('site-unlocked') === 'true') {
       document.body.classList.add('unlocked');
     }
   </script>
@@ -90,7 +91,7 @@
         </h2>
         <p class="project-desc">Improving self-service experience</p>
         <div class="project-meta">
-          <span class="year mono">2025–2026</span>
+          <span class="year mono">2025–Present</span>
           <span class="type mono">UX Engineer</span>
         </div>
       </div>
