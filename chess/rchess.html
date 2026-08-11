@@ -7,25 +7,25 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="project.css" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../project/project.css" />
   <link rel="stylesheet" href="rchess.css" />
 </head>
 <body class="project-page">
 
   <!-- NAV -->
   <nav class="scrolled">
-    <a href="index.html" class="nav-name">&gt;_aya kakizaki</a>
+    <a href="../index.html" class="nav-name">&gt;_aya kakizaki</a>
     <ul class="nav-links">
-      <li><a href="index.html#work">work</a></li>
-      <li><a href="about.html">about</a></li>
-      <li><a href="resume.pdf" target="_blank">resume</a></li>
+      <li><a href="../index.html#work">work</a></li>
+      <li><a href="../about/about.html">about</a></li>
+      <li><a href="../resume.pdf" target="_blank">resume</a></li>
     </ul>
   </nav>
 
   <!-- HERO BANNER -->
   <div class="proj-hero rc-hero">
-    <img src="assets/rchess.jpg" alt="r/Chess" class="proj-hero-img" onerror="this.style.display='none'" />
+    <img src="../assets/rchess.jpg" alt="r/Chess" class="proj-hero-img" onerror="this.style.display='none'" />
     <div class="rc-hero-content">
       <div class="rc-board-grid" aria-hidden="true"></div>
       <div class="rc-hero-text">
@@ -39,7 +39,7 @@
   <!-- PROJECT HEADER -->
   <div class="proj-header">
     <div class="proj-header-inner">
-      <div class="proj-back"><a href="index.html">← back</a></div>
+      <div class="proj-back"><a href="../index.html">← back</a></div>
       <div class="proj-tags">
         <span>UX Research</span>
         <span>Qualitative Analysis</span>
@@ -303,7 +303,7 @@
       <!-- NEXT PROJECT -->
       <div class="proj-next">
         <span class="proj-next-label">next project</span>
-        <a href="spotify.html" class="proj-next-link">
+        <a href="../spotify/spotify.html" class="proj-next-link">
           Spotify Case Study <span>→</span>
         </a>
       </div>
@@ -316,7 +316,7 @@
     <span class="mono gh-footer-code">/* designed &amp; built with care */</span>
   </footer>
 
-  <script src="project.js"></script>
+  <script src="../project/project.js"></script>
   <script>
     // Build chess board decoration
     const grid = document.querySelector('.rc-board-grid');
