@@ -33,6 +33,16 @@ window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 20);
 });
 
+// macOS menu bar clock (homepage only)
+const menuClock = document.querySelector('.menu-clock');
+if (menuClock) {
+  const updateClock = () => {
+    menuClock.textContent = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+  };
+  updateClock();
+  setInterval(updateClock, 30000);
+}
+
 // Hero fades in immediately on load
 window.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.hero-text, .hero-photo').forEach((el, i) => {
