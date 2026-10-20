@@ -10,9 +10,17 @@ script: /js/main.js
   <!-- HERO -->
   <section class="hero">
     <div class="hero-window">
-      <div class="window-bar">
-        <span class="window-dot red"></span><span class="window-dot yellow"></span><span class="window-dot green"></span>
-        <span class="window-path mono">~/aya/home.sh</span>
+      <div class="window-bar rice-bar">
+        <div class="rice-bar-left">
+          <span class="window-dot red"></span><span class="window-dot yellow"></span><span class="window-dot green"></span>
+          <span class="workspace-badge mono">⊞ MAIN</span>
+          <span class="window-path mono active-tab">~/aya/home.sh</span>
+        </div>
+        <div class="rice-bar-right mono">
+          <span class="rice-stat"><span class="rice-stat-icon">🕐</span><span class="rice-clock"></span></span>
+          <span class="rice-divider">❮</span>
+          <span class="rice-stat"><span class="rice-stat-icon">⏱</span><span class="rice-uptime">0m 00s</span></span>
+        </div>
       </div>
       <div class="window-body hero-window-body">
         <div class="hero-photo">
@@ -65,7 +73,7 @@ script: /js/main.js
           <span>Content Design</span>
         </div>
         <h2 class="project-title">
-          <a href="https://formlabs.com/">Formlabs <span class="arrow">→</span></a>
+          <a href="/projects/formlabs/">Formlabs <span class="arrow">→</span></a>
         </h2>
         <p class="project-desc">Improving self-service experience</p>
         <div class="project-meta mono">
@@ -78,7 +86,7 @@ script: /js/main.js
           <span class="window-dot red"></span><span class="window-dot yellow"></span><span class="window-dot green"></span>
           <span class="window-path mono">formlabs.app</span>
         </div>
-        <a href="https://formlabs.com/">
+        <a href="/projects/formlabs/">
           <img src="/assets/formlabs/formlabs.jpg" alt="Formlabs" onerror="this.src=''" />
           <div class="image-overlay">
             <span>View Project</span>

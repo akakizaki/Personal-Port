@@ -1,0 +1,491 @@
+---
+layout: base.njk
+title: Formlabs Case Studies — aya kakizaki
+bodyClass: project-page
+css:
+  - /css/project.css
+script: /js/project.js
+---
+  <!-- HERO BANNER -->
+  <div class="proj-hero">
+    <img
+      src="/assets/formlabs/formlabs.jpg"
+      alt="Formlabs"
+      class="proj-hero-img"
+      onerror="this.style.display='none'"
+    />
+
+    <div class="proj-hero-overlay"></div>
+  </div>
+
+  <!-- PROJECT HEADER -->
+  <div class="proj-header">
+    <div class="proj-header-inner">
+      <div class="proj-back">
+        <a href="/">← back</a>
+      </div>
+      <div class="proj-tags">
+        <span>AI Interaction Design</span>
+        <span>Content Design</span>
+        <span>UX Research</span>
+        <span>Engineering</span>
+      </div>
+      <h1 class="proj-title">Formlabs Portfolio Case Studies</h1>
+      <p class="proj-subtitle">I design, research, and build AI-powered support experiences. At Formlabs, I own how customers get help: I research how they look for it, design the AI conversations and content that answer them, and engineer the systems that deliver it.</p>
+
+      <div class="proj-meta-row">
+        <div class="proj-meta-item">
+          <span class="meta-label">Role</span>
+          <span class="meta-value">UX Engineer</span>
+        </div>
+        <div class="proj-meta-item">
+          <span class="meta-label">Company</span>
+          <span class="meta-value">Formlabs</span>
+        </div>
+        <div class="proj-meta-item">
+          <span class="meta-label">Duration</span>
+          <span class="meta-value">2025–Present</span>
+        </div>
+      </div>
+
+      <div class="cs-section-label" style="margin-top:48px;">At a glance</div>
+      <div class="cs-results-grid">
+        <div class="result-card">
+          <span class="result-icon">↑</span>
+          <strong>3x more cases resolved</strong>
+          <p>by our AI agent</p>
+        </div>
+        <div class="result-card">
+          <span class="result-icon">↑</span>
+          <strong>30% faster resolution</strong>
+          <p>and fewer cases opened</p>
+        </div>
+        <div class="result-card">
+          <span class="result-icon">✦</span>
+          <strong>1,500+ articles migrated</strong>
+          <p>through a pipeline I built</p>
+        </div>
+        <div class="result-card">
+          <span class="result-icon">✦</span>
+          <strong>20+ components shipped</strong>
+          <p>reusable across the support site</p>
+        </div>
+        <div class="result-card">
+          <span class="result-icon">✓</span>
+          <strong>3 product launches</strong>
+          <p>supported with research and website updates</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="proj-body">
+
+    <!-- STICKY TOC -->
+    <aside class="proj-toc">
+      <nav class="toc-nav">
+        <a href="#ai-agent"     class="toc-link" data-section="ai-agent">AI Support Agent</a>
+        <a href="#routing"      class="toc-link" data-section="routing">Support Routing</a>
+        <a href="#migration"    class="toc-link" data-section="migration">Site Migration</a>
+      </nav>
+    </aside>
+
+    <!-- CONTENT -->
+    <main class="proj-content">
+
+      <section id="ai-agent" class="cs-section">
+        <div class="cs-section-label">01 · AI Interaction Design · Content Design · Research · Engineering</div>
+        <h2 class="cs-heading">Designing an AI Support Agent Customers Can Trust</h2>
+
+        <div class="cs-callout highlight">
+          <span class="callout-label">Result</span>
+          <p><strong>3x increase in chatbot-resolved cases.</strong> Customers weren't engaging with our AI agent, and when they did, it often failed them. I studied how customers actually use the agent to get help, then redesigned what it learns from: the content, the conversation flow, and the data it can access.</p>
+        </div>
+
+        <p class="cs-note"><strong>Role:</strong> UX Engineer, user research, owning content design, interaction design, QA, and integration <br><strong>Tools &amp; methods:</strong> Forethought, Django CMS, Figma, LLM-assisted analysis, qualitative and quantitative research</p>
+
+        <h3 class="cs-subheading">The problem</h3>
+        <p>Our AI support agent was only as good as the content behind it, and customers could tell. Click rates on the AI chat started low, a sign that customers didn't see it as a reliable way to get help. Behind the scenes, support articles were written for people skimming a page, not for a model retrieving an answer: the same fact appeared in different formats across hundreds of articles, key details were buried in PDFs, and the agent often missed which product a customer owned. The result: vague answers, dead ends, and customers giving up on chat to open a case.</p>
+
+        <div class="cs-callout">
+          <span class="callout-label">HMW</span>
+          <p>How might we make our AI agent understand the question, find the right answer, and deliver it in a way customers trust?</p>
+        </div>
+
+        <h3 class="cs-subheading">Process</h3>
+        <div class="cs-improvements">
+          <div class="improvement-item">
+            <div class="improvement-number">01</div>
+            <div class="improvement-content">
+              <strong>Auditing the agent's failures</strong>
+              <p>I reviewed real customer conversations where the agent failed or escalated, and used AI-assisted analysis to cluster them into recurring failure types: missing content, unclear content, wrong product context, and answers locked in documents the agent couldn't read.</p>
+            </div>
+          </div>
+          <div class="improvement-item">
+            <div class="improvement-number">02</div>
+            <div class="improvement-content">
+              <strong>Designing content for machines and people</strong>
+              <p>I created content standards so every article follows a predictable structure: consistent headings, one idea per section, and reusable components for warnings, steps, and required supplies. Structured content is easier for the AI to retrieve accurately and easier for customers to scan.</p>
+            </div>
+          </div>
+          <div class="improvement-item">
+            <div class="improvement-number">03</div>
+            <div class="improvement-content">
+              <strong>Improving how the agent captures context</strong>
+              <p>I redesigned the conversation flow so the agent identifies key context, like which product the customer is using, before answering. That narrows retrieval to the right articles instead of a best guess across the whole catalog.</p>
+            </div>
+          </div>
+          <div class="improvement-item">
+            <div class="improvement-number">04</div>
+            <div class="improvement-content">
+              <strong>Unlocking data trapped in PDFs</strong>
+              <p>Product settings lived in PDFs the agent couldn't use reliably. I built a lookup API connected through the agent's action builder, so the agent can answer settings questions directly from source data. The rule I designed around: the agent never invents names or values. Every answer traces back to the source.</p>
+            </div>
+          </div>
+          <div class="improvement-item">
+            <div class="improvement-number">05</div>
+            <div class="improvement-content">
+              <strong>Testing and iterating</strong>
+              <p>I tested the agent against real customer questions before and after each change, tracking where answers improved and where gaps remained.</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="cs-note">Due to NDA, parts of this process are restricted. I'm happy to walk through the details in conversation.</p>
+
+        <h3 class="cs-subheading">Key decisions</h3>
+        <div class="cs-insights">
+          <div class="insight-item">
+            <span class="insight-num">01</span>
+            <div>
+              <strong>Fix the content, not the model</strong>
+              <p>Tuning prompts only goes so far when the source content is inconsistent. Restructuring the content fixed the root cause, and it improved the support site for human readers at the same time.</p>
+            </div>
+          </div>
+          <div class="insight-item">
+            <span class="insight-num">02</span>
+            <div>
+              <strong>Accuracy over coverage</strong>
+              <p>For product settings, a wrong answer is worse than no answer. I designed the agent to answer only from source data and hand off when it can't, which protects customer trust.</p>
+            </div>
+          </div>
+          <div class="insight-item">
+            <span class="insight-num">03</span>
+            <div>
+              <strong>Lightweight over heavyweight</strong>
+              <p>I hosted the lookup API on a developer-friendly cloud platform, so the support and documentation team can update the data without an engineer.</p>
+            </div>
+          </div>
+        </div>
+
+      
+
+        <h3 class="cs-subheading">Solution</h3>
+        <div class="cs-findings">
+          <div class="finding">
+            <div class="finding-header"><span class="finding-icon" style="color:#ff6101">✓</span><strong>AI-readable content standards</strong></div>
+            <p>Structured content standards applied across the knowledge base.</p>
+          </div>
+          <div class="finding">
+            <div class="finding-header"><span class="finding-icon" style="color:#ff6101">✓</span><strong>Context-aware conversation flow</strong></div>
+            <p>Captures product context before answering.</p>
+          </div>
+          <div class="finding">
+            <div class="finding-header"><span class="finding-icon" style="color:#ff6101">✓</span><strong>Source-faithful lookup API</strong></div>
+            <p>Answers product settings questions directly from source data.</p>
+          </div>
+          <div class="finding">
+            <div class="finding-header"><span class="finding-icon" style="color:#ff6101">✓</span><strong>Fallback to a person</strong></div>
+            <p>A clear path to a human when the agent can't answer confidently.</p>
+          </div>
+          <div class="finding">
+            <div class="finding-header"><span class="finding-icon" style="color:#ff6101">✓</span><strong>Ongoing test-and-improve loop</strong></div>
+            <p>Based on real customer questions.</p>
+          </div>
+        </div>
+
+        <h3 class="cs-subheading">Impact</h3>
+        <div class="cs-results-grid">
+          <div class="result-card">
+            <span class="result-icon">↑</span>
+            <strong>3x increase</strong>
+            <p>in chatbot-resolved cases</p>
+          </div>
+          <div class="result-card">
+            <span class="result-icon">✓</span>
+            <strong>Accurate, product-specific answers</strong>
+            <p>without waiting for a human</p>
+          </div>
+          <div class="result-card">
+            <span class="result-icon">✦</span>
+            <strong>Shared content standards</strong>
+            <p>now serve both the AI agent and the support site</p>
+          </div>
+        </div>
+
+        <div class="cs-callout highlight">
+          <span class="callout-label">What I learned</span>
+          <p>Designing for AI is content design. The biggest gains didn't come from tuning the model; they came from giving it clean, structured, trustworthy content and the right context.</p>
+          <p>I also learned that a correct answer isn't the same as a useful one. Designing AI interactions means designing the output for the person reading it: is it specific to their product, short enough to act on, and honest about what it doesn't know? Success isn't whether the AI responded. It's whether the customer left with their problem solved.</p>
+        </div>
+      </section>
+
+      <section id="routing" class="cs-section">
+        <div class="cs-section-label">02 · UX Research · Service Design · AI Interaction · Engineering</div>
+        <h2 class="cs-heading">From Phone Calls to Self-Service: Rethinking Support Routing</h2>
+
+        <div class="cs-callout highlight">
+          <span class="callout-label">Result</span>
+          <p><strong>30% reduction in time to resolution and cases opened.</strong> Customers called support by default, even for the simplest questions AI could answer in minutes. Through research, I found out why and redesigned the routing so AI chat comes first and a person is always reachable.</p>
+        </div>
+
+        <p class="cs-note"><strong>Role:</strong> UX Engineer, leading research, strategy, and design <br> <strong>Methods:</strong> Journey mapping, user personas, heatmap analysis, user testing, prototyping, competitive analysis</p>
+
+        <h3 class="cs-subheading">The problem</h3>
+        <p>With Form Studio 1 expected to reach hundreds of thousands of customers, our support team couldn't answer every question by phone. Yet customers were going straight to the phone, even for the simplest questions our AI agent and support content could answer in seconds. Phone numbers appeared across many pages with inconsistent rules, so customers took the most visible path rather than the fastest one. That meant longer waits for customers and a heavier load on the support team.</p>
+        <p>The business need was clear: reserve phone support for the customers who truly need it, and give everyone else a faster path.</p>
+
+        <div class="cs-callout">
+          <span class="callout-label">HMW</span>
+          <p>How might we guide customers to the fastest path to an answer, without hiding help from people who truly need a human?</p>
+        </div>
+
+        <h3 class="cs-subheading">Process</h3>
+        <div class="cs-improvements">
+          <div class="improvement-item">
+            <div class="improvement-number">01</div>
+            <div class="improvement-content">
+              <strong>Understanding where people go for help</strong>
+              <p>I mapped the full customer support journey and analyzed heatmaps to see where customers clicked when they needed support. I then ran user testing to understand why they chose each path.</p>
+            </div>
+          </div>
+          <div class="improvement-item">
+            <div class="improvement-number">02</div>
+            <div class="improvement-content">
+              <strong>Auditing every entry point</strong>
+              <p>I audited every place a phone number appeared across the website and found conflicting visibility rules between pages, plus a key customer journey that had never been designed for.</p>
+            </div>
+          </div>
+          <div class="improvement-item">
+            <div class="improvement-number">03</div>
+            <div class="improvement-content">
+              <strong>Learning from the best</strong>
+              <p>I studied how leading support experiences, including Apple Support, guide customers toward self-service while keeping a clear path to a person.</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="cs-note">Due to NDA, detailed process artifacts are restricted. I'm happy to walk through the work in conversation; feel free to reach out.</p>
+
+        <h3 class="cs-subheading">Key decision</h3>
+        <div class="cs-callout highlight">
+          <span class="callout-label">Guide, don't hide</span>
+          <p>Removing the phone number entirely would have pushed cases down on paper while frustrating customers and eroding trust. I chose contextual visibility instead: AI chat leads, and the phone number appears where a person is truly the right answer.</p>
+        </div>
+
+        {# <div class="cs-image-grid two-col">
+          <figure>
+            <img src="https://placehold.co/540x380/0f0f0f/ff6101?text=Customer+Journey+Map" alt="Simplified customer journey map" />
+            <figcaption>// simplified customer journey map, with sensitive details removed</figcaption>
+          </figure>
+          <figure>
+            <img src="https://placehold.co/540x380/0f0f0f/ff6101?text=Contact+Page+Before%2FAfter" alt="Contact page before/after" />
+            <figcaption>// before/after of the contact page showing AI chat as the primary path</figcaption>
+          </figure>
+        </div> #}
+
+        <h3 class="cs-subheading">Solution</h3>
+        <div class="cs-findings">
+          <div class="finding">
+            <div class="finding-header"><span class="finding-icon" style="color:#ff6101">✓</span><strong>Contextual phone visibility</strong></div>
+            <p>Shown only in the right contexts, instead of everywhere.</p>
+          </div>
+          <div class="finding">
+            <div class="finding-header"><span class="finding-icon" style="color:#ff6101">✓</span><strong>AI chat as the primary path</strong></div>
+            <p>Positioned as the most visible way to get help.</p>
+          </div>
+          <div class="finding">
+            <div class="finding-header"><span class="finding-icon" style="color:#ff6101">✓</span><strong>Clear escalation to a person</strong></div>
+            <p>When AI and self-service can't solve the problem.</p>
+          </div>
+          <div class="finding">
+            <div class="finding-header"><span class="finding-icon" style="color:#ff6101">✓</span><strong>Scrape-resistant contact details</strong></div>
+            <p>A technical approach that reveals contact details contextually.</p>
+          </div>
+        </div>
+
+        <h3 class="cs-subheading">Impact</h3>
+        <div class="cs-results-grid">
+          <div class="result-card">
+            <span class="result-icon">↓</span>
+            <strong>30% reduction</strong>
+            <p>in time to resolution and cases opened</p>
+          </div>
+          <div class="result-card">
+            <span class="result-icon">↑</span>
+            <strong>Faster answers</strong>
+            <p>customers reach answers faster through AI chat and self-service</p>
+          </div>
+          <div class="result-card">
+            <span class="result-icon">✦</span>
+            <strong>More time for complex issues</strong>
+            <p>support agents spend more time on issues that need a human</p>
+          </div>
+        </div>
+
+        <div class="cs-callout highlight">
+          <span class="callout-label">What I learned</span>
+          <p>Deflection only works when it feels like help, not a wall. Pairing a strong AI-first path with an honest route to a person built trust instead of frustration.</p>
+          <p>AI support is new, and customer expectations of it are still forming. Designing well here means watching closely how people's mental models shift and adapting just as quickly.</p>
+        </div>
+      </section>
+
+      <section id="migration" class="cs-section">
+        <div class="cs-section-label">03 · Engineering · UX Research · Information Architecture · QA · AI-Assisted Workflows</div>
+        <h2 class="cs-heading">Rebuilding the Support Site: Salesforce to Django</h2>
+
+        <div class="cs-callout highlight">
+          <span class="callout-label">Result</span>
+          <p><strong>1,500+ articles migrated · 20+ new components.</strong> We had to move 1,500+ support articles off Salesforce. Instead of copying them by hand, I built a pipeline that migrated and restructured them automatically, designed and engineered the new site, and built QA tools to launch it reliably.</p>
+        </div>
+
+        <p class="cs-note"><strong>Role:</strong> UX Engineer (full-stack), owning the migration pipeline, UX research and design, front-end components, and QA <br> <strong>Stack:</strong> Python, TypeScript, JavaScript, headless CMS, Salesforce, JSON, CI/CD, Figma</p>
+
+        <h3 class="cs-subheading">The problem</h3>
+        <p>Our products and documentation were growing fast, and our support site couldn't keep up. It ran on Salesforce Knowledge, which limited design flexibility and made content hard to structure, reuse, and keep consistent. With an AI agent now answering customer questions from that same content, consistency wasn't a nice-to-have: the agent could only be as accurate as the data it pulled from.</p>
+        <p>Moving to Django meant migrating more than 1,500 articles and documents, from repair guides to troubleshooting content, without losing formatting, media, or accuracy. Doing it by hand would have taken months and introduced errors.</p>
+
+        <h3 class="cs-subheading">Process</h3>
+        <div class="cs-improvements">
+          <div class="improvement-item">
+            <div class="improvement-number">01</div>
+            <div class="improvement-content">
+              <strong>Automating the migration</strong>
+              <p>I built an automated pipeline that converts Salesforce Knowledge articles into Django-compatible structured JSON. It maps each piece of content to the right CMS component (images, warnings, videos, required supplies) and handles edge cases like embedded YouTube videos and hosted media. I used AI-assisted workflows to speed up mapping rules and handle messy legacy content.</p>
+            </div>
+          </div>
+          <div class="improvement-item">
+            <div class="improvement-number">02</div>
+            <div class="improvement-content">
+              <strong>Rebuilding the information architecture</strong>
+              <p>Before designing a single page, I ran user research to understand how customers look for help content. The old structure reflected how our teams organized information, not how customers searched for it, so I rebuilt the information architecture around customers' mental models.</p>
+            </div>
+          </div>
+          <div class="improvement-item">
+            <div class="improvement-number">03</div>
+            <div class="improvement-content">
+              <strong>Designing the new support site</strong>
+              <p>I prototyped the new experience in Figma, from wireframes to high-fidelity designs, focused on making articles easier to scan and navigate.</p>
+            </div>
+          </div>
+          <div class="improvement-item">
+            <div class="improvement-number">04</div>
+            <div class="improvement-content">
+              <strong>Engineering new components</strong>
+              <p>I built 20+ reusable, token-based components so the design system and production code stay in sync, and wrote safe, repeatable scripts for updating content at scale.</p>
+            </div>
+          </div>
+          <div class="improvement-item">
+            <div class="improvement-number">05</div>
+            <div class="improvement-content">
+              <strong>QA at scale</strong>
+              <p>With 1,500+ articles, manual checking wasn't enough. I built Chrome extensions to scan pages for broken links and clean up staging URLs automatically, catching issues before launch.</p>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="cs-subheading">Key decisions</h3>
+        <div class="cs-insights">
+          <div class="insight-item">
+            <span class="insight-num">01</span>
+            <div>
+              <strong>Restructure, don't lift-and-shift</strong>
+              <p>Copying articles as-is would have been faster up front but would have carried every inconsistency into the new site. Converting them into structured components made the content reusable, and later made it readable for our AI agent.</p>
+            </div>
+          </div>
+          <div class="insight-item">
+            <span class="insight-num">02</span>
+            <div>
+              <strong>Safe to rerun</strong>
+              <p>I built every script to be repeatable, with a dry-run mode, so the team could preview changes and rerun migrations without breaking live content.</p>
+            </div>
+          </div>
+        </div>
+
+        {# <div class="cs-image-grid two-col">
+          <figure>
+            <img src="https://placehold.co/540x380/0f0f0f/ff6101?text=Salesforce+%E2%86%92+JSON+%E2%86%92+Django" alt="Migration pipeline diagram" />
+            <figcaption>// pipeline diagram, Salesforce article → JSON → Django CMS components</figcaption>
+          </figure>
+          <figure>
+            <img src="https://placehold.co/540x380/0f0f0f/ff6101?text=Component+Library" alt="Component library and article page" />
+            <figcaption>// component library and before/after article page</figcaption>
+          </figure>
+        </div> #}
+
+        <h3 class="cs-subheading">Solution</h3>
+        <div class="cs-findings">
+          <div class="finding">
+            <div class="finding-header"><span class="finding-icon" style="color:#ff6101">✓</span><strong>Automated, repeatable pipeline</strong></div>
+            <p>From Salesforce to Django.</p>
+          </div>
+          <div class="finding">
+            <div class="finding-header"><span class="finding-icon" style="color:#ff6101">✓</span><strong>20+ reusable components</strong></div>
+            <p>A redesigned support site built on a shared component library.</p>
+          </div>
+          <div class="finding">
+            <div class="finding-header"><span class="finding-icon" style="color:#ff6101">✓</span><strong>Structured content</strong></div>
+            <p>Also powers our AI support agent (see Project 01).</p>
+          </div>
+          <div class="finding">
+            <div class="finding-header"><span class="finding-icon" style="color:#ff6101">✓</span><strong>Automated QA tooling</strong></div>
+            <p>Made a large migration reliable.</p>
+          </div>
+        </div>
+
+        <h3 class="cs-subheading">Impact</h3>
+        <div class="cs-results-grid">
+          <div class="result-card">
+            <span class="result-icon">✦</span>
+            <strong>1,500+ articles</strong>
+            <p>and documents migrated accurately</p>
+          </div>
+          <div class="result-card">
+            <span class="result-icon">✦</span>
+            <strong>20+ reusable components</strong>
+            <p>shared across the support site</p>
+          </div>
+          <div class="result-card">
+            <span class="result-icon">✓</span>
+            <strong>Customer-centered information architecture</strong>
+            <p>built around how customers actually search</p>
+          </div>
+          <div class="result-card">
+            <span class="result-icon">↑</span>
+            <strong>A structured content foundation</strong>
+            <p>improved AI agent answers and supported 3 product launches</p>
+          </div>
+        </div>
+
+        <div class="cs-callout highlight">
+          <span class="callout-label">What I learned</span>
+          <p>A migration is a design opportunity. By structuring content during the move instead of copying it over, we built a foundation that serves customers, writers, developers, and our AI agent at the same time.</p>
+        </div>
+      </section>
+
+      <div class="cs-callout highlight">
+        <span class="callout-label">Let's talk</span>
+        <p>I'm looking for roles where design, research, engineering, and AI come together. If that sounds like your team, let's connect! <a href="mailto:ayakakiz512@gmail.com" class="inline-link">Email me</a> or view my resume.</p>
+      </div>
+
+      <!-- NEXT PROJECT -->
+      <div class="proj-next">
+        <span class="proj-next-label">next project</span>
+        <a href="/projects/vr/" class="proj-next-link">
+          VR Campus Museum <span>→</span>
+        </a>
+      </div>
+
+    </main>
+  </div>

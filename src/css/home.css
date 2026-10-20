@@ -103,16 +103,102 @@ body.home .dot.d5 { background: var(--accent); }
 body.home .dot.d6 { background: var(--swatch-magenta); }
 body.home .dot.d7 { background: var(--text); }
 
-/* ── HERO WINDOW ── */
-body.home .hero { align-items: stretch; }
+/* ── HERO WINDOW (liquid glass) ── */
+body.home .hero { align-items: stretch; position: relative; }
+
+/* color behind the glass panel — blurred so the panel has something to refract */
+body.home .hero::before {
+  content: '';
+  position: absolute;
+  inset: -80px;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 25% 15%, rgba(255, 143, 209, 0.18), transparent 55%),
+    radial-gradient(circle at 80% 85%, rgba(94, 196, 255, 0.12), transparent 55%);
+  filter: blur(14px);
+  pointer-events: none;
+}
 
 body.home .hero-window {
-  background: var(--surface);
-  border: 1px solid var(--border);
+  position: relative;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: var(--radius);
   overflow: hidden;
   width: 100%;
+  box-shadow:
+    0 20px 60px -10px rgba(255, 143, 209, 0.15),
+    0 8px 32px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+  transition: transform 0.15s ease-out;
+  transform: perspective(800px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
 }
+
+/* specular highlight — follows the cursor via --mx/--my set in main.js,
+   falls back to a fixed position when JS hasn't run yet */
+body.home .hero-window::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at var(--mx, 30%) var(--my, 20%), rgba(255, 255, 255, 0.28), transparent 45%);
+  transition: background 0.1s ease-out;
+  pointer-events: none;
+}
+
+/* subtle grain so the glass reads as frosted texture, not a flat gradient */
+body.home .hero-window::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.035;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* let the titlebar strip read as part of the same glass pane, not a solid lid */
+body.home .hero-window .window-bar {
+  background: rgba(255, 255, 255, 0.04);
+  border-bottom-color: rgba(255, 255, 255, 0.12);
+}
+
+/* rice-style tab bar: workspace badge + active tab on the left, live stat
+   widgets on the right — styled after tmux/WezTerm status bars */
+body.home .hero-window .rice-bar { justify-content: space-between; }
+
+body.home .rice-bar-left { display: flex; align-items: center; gap: 8px; }
+
+body.home .workspace-badge {
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: rgba(255, 143, 209, 0.15);
+  color: var(--accent);
+  letter-spacing: 0.04em;
+}
+
+body.home .window-path.active-tab {
+  margin-left: 0;
+  padding: 3px 10px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--text);
+}
+
+body.home .rice-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  color: var(--mono-dim);
+}
+
+body.home .rice-stat { display: flex; align-items: center; gap: 4px; }
+body.home .rice-stat-icon { font-size: 11px; opacity: 0.85; }
+body.home .rice-divider { color: rgba(255, 255, 255, 0.18); font-size: 10px; }
+body.home .rice-clock,
+body.home .rice-uptime { font-variant-numeric: tabular-nums; }
 
 body.home .hero-window-body {
   display: flex;
