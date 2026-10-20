@@ -1,3 +1,13 @@
+// macOS menu bar clock
+const menuClock = document.querySelector('.menu-clock');
+if (menuClock) {
+  const updateClock = () => {
+    menuClock.textContent = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+  };
+  updateClock();
+  setInterval(updateClock, 30000);
+}
+
 // Scroll-spy ToC
 const sections = document.querySelectorAll('.cs-section');
 const tocLinks = document.querySelectorAll('.toc-link');

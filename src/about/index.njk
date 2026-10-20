@@ -1,27 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>about — aya kakizaki</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../style.css" />
-  <link rel="stylesheet" href="about.css" />
-</head>
-<body class="project-page">
-
-  <!-- NAV -->
-  <nav class="scrolled">
-    <a href="../index.html" class="nav-name">&gt;_aya kakizaki</a>
-    <ul class="nav-links">
-      <li><a href="../index.html#work">work</a></li>
-      <li><a href="about.html" class="active">about</a></li>
-      <li><a href="../resume.pdf" target="_blank">resume</a></li>
-    </ul>
-  </nav>
-
+---
+layout: base.njk
+title: about — aya kakizaki
+bodyClass: project-page
+css:
+  - /css/about.css
+script: /js/about.js
+---
   <main class="about-main">
 
     <!-- ── PROFILE CARD ── -->
@@ -29,7 +13,7 @@
 
       <div class="gh-avatar-col">
         <div class="gh-avatar">
-          <img src="../assets/pfp.webp" alt="aya kakizaki"
+          <img src="/assets/pfp.webp" alt="aya kakizaki"
             onerror="this.style.display='none';this.parentElement.classList.add('no-img')" />
         </div>
 
@@ -63,7 +47,7 @@
         <div class="gh-social-links">
           <a href="www.linkedin.com/in/aya-kakizaki-a93058202" target="_blank" class="gh-social-btn">LinkedIn</a>
           <a href="https://github.com" target="_blank" class="gh-social-btn">GitHub</a>
-          <a href="../resume.pdf" target="_blank" class="gh-social-btn primary">Resume</a>
+          <a href="/resume.pdf" target="_blank" class="gh-social-btn primary">Resume</a>
         </div>
       </div>
 
@@ -81,26 +65,8 @@
           <p>I'm a recent grad from Georgia Tech with a <strong>Bachelor of Science in Computational Media</strong>, an intersection between computer science and design. Currently designing and developing at Formlabs. My passions lie in designing and developing enjoyable, inclusive experiences that cater to diverse communities.</p>
           <p>I sit at the intersection of <strong>UX design</strong> and <strong>frontend development</strong> — I care just as much about the feel of an interaction as I do about developer's experience.</p>
 
-          <!-- STATS ROW -->
-          <div class="gh-stats">
-            <div class="stat-card">
-              <span class="stat-num">6+</span>
-              <span class="stat-label">projects shipped</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-num">3</span>
-              <span class="stat-label">semesters of VR research</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-num">381M</span>
-              <span class="stat-label">Spotify users designing for</span>
-            </div>
-          </div>
-
           <!-- CURRENTLY -->
-          <div class="gh-section-title">
-            <span class="mono">// currently</span>
-          </div>
+          <div class="rice-box" data-label="currently">
           <div class="gh-currently">
             <div class="currently-item">
               <span class="c-dot working"></span>
@@ -115,11 +81,10 @@
               <span><strong>Playing</strong> — VALORANT, Stardew Valley, Hollow Knight</span>
             </div>
           </div>
+          </div>
 
           <!-- TOOLS -->
-          <div class="gh-section-title">
-            <span class="mono">// tools & skills</span>
-          </div>
+          <div class="rice-box" data-label="tools & skills">
           <div class="gh-tools">
             <div class="tool-group">
               <span class="tool-group-label">Design</span>
@@ -140,28 +105,8 @@
               </div>
             </div>
           </div>
-
-          <!-- CONTRIBUTION GRAPH (decorative) -->
-          <div class="gh-section-title">
-            <span class="mono">// activity</span>
-          </div>
-          <div class="gh-contrib-wrap">
-            <div class="gh-contrib-graph" id="contribGraph"></div>
-            <div class="contrib-legend">
-              <span>Less</span>
-              <div class="legend-cells">
-                <div data-level="0"></div>
-                <div data-level="1"></div>
-                <div data-level="2"></div>
-                <div data-level="3"></div>
-                <div data-level="4"></div>
-              </div>
-              <span>More</span>
-            </div>
           </div>
 
-        </div><!-- /readme-body -->
-      </div><!-- /content-col -->
     </section>
 
     <!-- ── INTERESTS ── -->
@@ -182,13 +127,13 @@
           <div class="interest-photos">
             <div class="photo-grid">
               <div class="photo-cell">
-                <img src="../assets/about/hollowknight.webp" alt="Hollow Knight" />
+                <img src="/assets/about/hollowknight.webp" alt="Hollow Knight" />
               </div>
               <div class="photo-cell">
-                <img src="../assets/about/stardew.webp" alt="Valorant" />
+                <img src="/assets/about/stardew.webp" alt="Valorant" />
               </div>
               <div class="photo-cell">
-                <img src="../assets/about/valo.avif" alt="Stardew Valley" />
+                <img src="/assets/about/valo.avif" alt="Stardew Valley" />
               </div>
             </div>
           </div>
@@ -207,13 +152,13 @@
           <div class="interest-photos">
             <div class="photo-grid">
               <div class="photo-cell">
-                <img src="../assets/about/travel1.avif" alt="Travel 1" onerror="this.src='https://placehold.co/200x200/0d1117/30363d?text=🌿'" />
+                <img src="/assets/about/travel1.avif" alt="Travel 1" onerror="this.src='https://placehold.co/200x200/0d1117/30363d?text=🌿'" />
               </div>
               <div class="photo-cell">
-                <img src="../assets/about/travel2.webp" alt="Travel 2" onerror="this.src='https://placehold.co/200x200/0d1117/30363d?text=🤖'" />
+                <img src="/assets/about/travel2.webp" alt="Travel 2" onerror="this.src='https://placehold.co/200x200/0d1117/30363d?text=🤖'" />
               </div>
               <div class="photo-cell">
-                <img src="../assets/about/travel3.webp" alt="Travel 3" onerror="this.src='https://placehold.co/200x200/0d1117/30363d?text=🍄'" />
+                <img src="/assets/about/travel3.webp" alt="Travel 3" onerror="this.src='https://placehold.co/200x200/0d1117/30363d?text=🍄'" />
               </div>
             </div>
           </div>
@@ -232,13 +177,13 @@
           <div class="interest-photos">
             <div class="photo-grid">
               <div class="photo-cell">
-                <img src="../assets/about/cafe1.webp" alt="Cafe 1" onerror="this.src='https://placehold.co/200x200/0d1117/30363d?text='" />
+                <img src="/assets/about/cafe1.webp" alt="Cafe 1" onerror="this.src='https://placehold.co/200x200/0d1117/30363d?text='" />
               </div>
               <div class="photo-cell">
-                <img src="../assets/about/cafe2.webp" alt="Cafe 2" onerror="this.src='https://placehold.co/200x200/0d1117/30363d?text='" />
+                <img src="/assets/about/cafe2.webp" alt="Cafe 2" onerror="this.src='https://placehold.co/200x200/0d1117/30363d?text='" />
               </div>
               <div class="photo-cell">
-                <img src="../assets/about/cafe3.webp" alt="Cafe 3" onerror="this.src='https://placehold.co/200x200/0d1117/30363d?text='" />
+                <img src="/assets/about/cafe3.webp" alt="Cafe 3" onerror="this.src='https://placehold.co/200x200/0d1117/30363d?text='" />
               </div>
             </div>
           </div>
@@ -248,12 +193,3 @@
     </section>
 
   </main>
-
-  <footer>
-    <span>© 2026 aya kakizaki</span>
-    <span>designed & built with care</span>
-  </footer>
-
-  <script src="about.js"></script>
-</body>
-</html>

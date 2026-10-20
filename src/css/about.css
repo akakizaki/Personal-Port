@@ -1,10 +1,26 @@
 /* ── ABOUT PAGE ── */
-/* Colors inherit from style.css variables — no overrides needed */
+/* Retheme the shared style.css variables — scoped to this page only,
+   since about.css is loaded by about.html alone. Nav structure/colors
+   come from the shared style.css rules, matching the rest of the site. */
+:root {
+  --bg: #0a0a0d;
+  --surface: #0e0e12;
+  --border: rgba(255, 255, 255, 0.08);
+  --text: #e9e9ee;
+  --muted: #65687a;
+  --accent: #ff8fd1;
+  --tag-bg: #141418;
+  --tag-text: #9a9db0;
+  --green: #ff8fd1;
+  --mono-dim: #5d6072;
+}
 
 .about-main {
   padding-top: 64px;
   min-height: 100vh;
 }
+
+.menu-clock { color: var(--mono-dim); font-size: 13px; letter-spacing: 0.04em; }
 
 /* ── PROFILE LAYOUT ── */
 .gh-profile {
@@ -29,7 +45,7 @@
 .gh-avatar {
   width: 100%;
   aspect-ratio: 1;
-  border-radius: 50%;
+  border-radius: 8px;
   overflow: hidden;
   border: 1px solid var(--border);
   background: var(--surface);
@@ -144,7 +160,7 @@
   transition: color 0.15s, border-color 0.15s;
 }
 
-.gh-social-btn:hover { color: var(--text); border-color: #444; }
+.gh-social-btn:hover { color: var(--text); border-color: rgba(255, 143, 209, 0.35); }
 
 .gh-social-btn.primary {
   background: var(--text);
@@ -157,12 +173,13 @@
 /* ── RIGHT: README PANEL ── */
 .gh-content-col {
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-left: 2px solid var(--accent);
+  border-radius: 6px;
   overflow: hidden;
 }
 
 .gh-readme-header {
-  background: var(--surface);
+  background: #121217;
   border-bottom: 1px solid var(--border);
   padding: 0 16px;
   display: flex;
@@ -180,9 +197,12 @@
   letter-spacing: 0.02em;
 }
 
+.readme-tab::before { content: '[ '; }
+.readme-tab::after { content: ' ]'; }
+
 .readme-tab.active {
   color: var(--text);
-  border-bottom-color: var(--text);
+  border-bottom-color: var(--accent);
 }
 
 .gh-readme-body {
@@ -228,7 +248,7 @@
   transition: border-color 0.2s;
 }
 
-.stat-card:hover { border-color: #3a3a3a; }
+.stat-card:hover { border-color: rgba(255, 143, 209, 0.35); }
 
 .stat-num {
   font-size: 22px;
@@ -244,11 +264,27 @@
   letter-spacing: 0.02em;
 }
 
-/* ── SECTION DIVIDERS ── */
-.gh-section-title {
-  margin: 28px 0 14px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--border);
+/* ── BTOP-STYLE BOXED SECTIONS ── */
+.rice-box {
+  position: relative;
+  border: 1px solid var(--border);
+  border-left: 2px solid var(--accent);
+  border-radius: 6px;
+  padding: 22px 18px 18px;
+  margin: 28px 0 18px;
+}
+
+.rice-box::before {
+  content: attr(data-label);
+  position: absolute;
+  top: -9px;
+  left: 14px;
+  background: var(--bg);
+  padding: 0 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--accent);
 }
 
 /* ── CURRENTLY ── */
@@ -295,7 +331,7 @@
 
 .tool-group-label {
   font-size: 11px;
-  color: #444;
+  color: var(--mono-dim);
   font-family: 'JetBrains Mono', monospace;
   letter-spacing: 0.04em;
   min-width: 60px;
@@ -321,7 +357,7 @@
 }
 
 .tool-tags span:hover {
-  border-color: #3a3a3a;
+  border-color: rgba(255, 143, 209, 0.35);
   color: var(--text);
 }
 
@@ -347,10 +383,10 @@
 
 .contrib-cell:hover { transform: scale(1.3); }
 .contrib-cell[data-level="0"] { background: var(--surface); border: 1px solid rgba(255,255,255,0.03); }
-.contrib-cell[data-level="1"] { background: #0e3320; }
-.contrib-cell[data-level="2"] { background: #1a5c38; }
-.contrib-cell[data-level="3"] { background: #2d8a55; }
-.contrib-cell[data-level="4"] { background: #4db87a; }
+.contrib-cell[data-level="1"] { background: #3a1a2e; }
+.contrib-cell[data-level="2"] { background: #6b2a52; }
+.contrib-cell[data-level="3"] { background: #b23d7a; }
+.contrib-cell[data-level="4"] { background: var(--accent); }
 
 .contrib-legend {
   display: flex;
@@ -358,7 +394,7 @@
   gap: 6px;
   justify-content: flex-end;
   font-size: 11px;
-  color: #444;
+  color: var(--mono-dim);
   font-family: 'JetBrains Mono', monospace;
 }
 
@@ -371,10 +407,10 @@
 }
 
 .legend-cells div[data-level="0"] { background: var(--surface); border: 1px solid rgba(255,255,255,0.03); }
-.legend-cells div[data-level="1"] { background: #0e3320; }
-.legend-cells div[data-level="2"] { background: #1a5c38; }
-.legend-cells div[data-level="3"] { background: #2d8a55; }
-.legend-cells div[data-level="4"] { background: #4db87a; }
+.legend-cells div[data-level="1"] { background: #3a1a2e; }
+.legend-cells div[data-level="2"] { background: #6b2a52; }
+.legend-cells div[data-level="3"] { background: #b23d7a; }
+.legend-cells div[data-level="4"] { background: var(--accent); }
 
 /* ── INTERESTS ── */
 .gh-interests {
@@ -454,7 +490,7 @@
 }
 
 .photo-cell:hover {
-  border-color: #3a3a3a;
+  border-color: rgba(255, 143, 209, 0.35);
   transform: scale(1.02);
 }
 

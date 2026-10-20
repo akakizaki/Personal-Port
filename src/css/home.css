@@ -1,10 +1,11 @@
 /* ══════════════════════════════════════════════════════════
    HOMEPAGE ONLY — clean dark neofetch theme (near-black flat
-   panels, single blue/cyan accent, monospace tree-style info).
+   panels, single pink accent, monospace tree-style info).
    Scoped entirely under body.home so style.css (shared by
-   about/project pages) stays untouched. Re-themes the base
-   rules via CSS var overrides, then layers on window chrome,
-   fetch-block info rows and the palette swatch.
+   about/project pages) stays untouched beyond the sitewide nav
+   and accent color defined there. Re-themes the base rules via
+   CSS var overrides, then layers on window chrome, fetch-block
+   info rows and the palette swatch.
    ══════════════════════════════════════════════════════════ */
 
 body.home {
@@ -14,17 +15,17 @@ body.home {
   --border: rgba(255, 255, 255, 0.08);
   --text: #e9e9ee;
   --muted: #65687a;
-  --accent: #5ec4ff;
+  --accent: #ff8fd1;
   --tag-bg: #141418;
   --tag-text: #9a9db0;
-  --green: #5ec4ff;
+  --green: #ff8fd1;
   --radius: 10px;
 
   /* new tokens for the rice look */
   --value: var(--accent);
   --mono-dim: #5d6072;
   --dot-red: #ff5f57;
-  --dot-yellow: #febc2e;
+  --dot-yellow: #e6c887;
   --dot-green: #28c840;
   --swatch-orange: #d2884a;
   --swatch-magenta: #bd93f9;
@@ -33,34 +34,9 @@ body.home {
   background: var(--bg);
 }
 
-/* ── SCROLLBAR ── */
-body.home::-webkit-scrollbar { width: 10px; }
-body.home::-webkit-scrollbar-track { background: transparent; }
-body.home::-webkit-scrollbar-thumb { background: #1c1c22; border-radius: 10px; }
-
 /* ── MENU BAR (nav) ── */
-body.home nav {
-  background: var(--bg);
-  border-bottom: 1px solid var(--border);
-}
-
-body.home .nav-name {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-family: 'JetBrains Mono', monospace;
-}
-
-body.home .nav-name::before {
-  content: '';
-  width: 8px;
-  height: 8px;
-  border-radius: 2px;
-  background: var(--accent);
-}
-
-body.home .nav-links a.active,
-body.home .nav-links a:hover { color: var(--accent); }
+/* nav structure/colors now come from the shared style.css rules */
+body.home nav { border-bottom: 1px solid var(--border); }
 
 body.home .menu-clock { color: var(--mono-dim); font-size: 13px; letter-spacing: 0.04em; }
 
@@ -196,7 +172,7 @@ body.home .project {
 
 body.home .project::before { display: none; }
 
-body.home .project:hover { border-color: rgba(94, 196, 255, 0.35); }
+body.home .project:hover { border-color: rgba(255, 143, 209, 0.35); }
 
 body.home .project-info { display: flex; flex-direction: column; justify-content: center; }
 
