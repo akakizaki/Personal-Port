@@ -1,48 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>aya kakizaki</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="home.css" />
-</head>
-<body class="home">
-  <script>
-    window.SITE_LOCK_ENABLED = false; // set to true to re-enable the password gate
-    if (!window.SITE_LOCK_ENABLED || sessionStorage.getItem('site-unlocked') === 'true') {
-      document.body.classList.add('unlocked');
-    }
-  </script>
-
-  <!-- LOCK SCREEN -->
-  <div id="lock-screen" class="lock-screen">
-    <div class="lock-box">
-      <p class="lock-prompt"><span class="gh-prompt">&gt;_</span> enter password<span class="gh-cursor">|</span></p>
-      <form id="lock-form" class="lock-form" autocomplete="off">
-        <input type="password" id="lock-input" class="lock-input" placeholder="••••••••" autofocus />
-        <button type="submit" class="lock-btn">unlock →</button>
-      </form>
-      <p id="lock-error" class="lock-error"></p>
-    </div>
-  </div>
-
-  <div class="site-content">
-
-  <!-- NAV -->
-  <nav>
-    <span class="nav-name">&gt;_aya kakizaki</span>
-    <ul class="nav-links">
-      <li><a href="#work" class="active">work</a></li>
-      <li><a href="about/about.html">about</a></li>
-      <li><a href="resume.pdf" target="_blank">resume</a></li>
-      <li><span class="menu-clock mono"></span></li>
-    </ul>
-  </nav>
-
+---
+layout: base.njk
+title: aya kakizaki
+bodyClass: home
+lockScreen: true
+css:
+  - /css/home.css
+script: /js/main.js
+---
   <!-- HERO -->
   <section class="hero">
     <div class="hero-window">
@@ -67,7 +31,7 @@
           <div class="fetch-block mono">
             <p class="fetch-header">System:</p>
             <p class="fetch-row"><span class="tree">├</span><span class="fetch-label">Role</span><span class="fetch-value">UX Engineer @Formlabs</span></p>
-            <p class="fetch-row"><span class="tree">├</span><span class="fetch-label">Focus</span><span class="fetch-value">HCI · User Experience · Full Stack Dev</span></p>
+            <p class="fetch-row"><span class="tree">├</span><span class="fetch-label">Focus</span><span class="fetch-value">HCI · UX · Full Stack Dev · AI Interaction Design</span></p>
             <p class="fetch-row"><span class="tree">└</span><span class="fetch-label">Status</span><span class="fetch-value">Open to new opportunities</span></p>
           </div>
           <div class="dots-row">
@@ -79,12 +43,12 @@
   </section>
 
   <!-- MARQUEE -->
-  <div class="marquee-wrap">
+  <!-- <div class="marquee-wrap">
     <div class="marquee-track">
       <span><span class="marquee-prompt">$</span> UX Design &nbsp;·&nbsp; Prototyping &nbsp;·&nbsp; React &nbsp;·&nbsp; Figma &nbsp;·&nbsp; User Research &nbsp;·&nbsp; D3.js &nbsp;·&nbsp; Unity &nbsp;·&nbsp; HTML/CSS &nbsp;·&nbsp; Accessibility &nbsp;·&nbsp; VR &nbsp;·&nbsp;</span>
       <span><span class="marquee-prompt">$</span> UX Design &nbsp;·&nbsp; Prototyping &nbsp;·&nbsp; React &nbsp;·&nbsp; Figma &nbsp;·&nbsp; User Research &nbsp;·&nbsp; D3.js &nbsp;·&nbsp; Unity &nbsp;·&nbsp; HTML/CSS &nbsp;·&nbsp; Accessibility &nbsp;·&nbsp; VR &nbsp;·&nbsp;</span>
     </div>
-  </div>
+  </div> -->
 
   <!-- WORK -->
   <section class="work" id="work">
@@ -115,7 +79,7 @@
           <span class="window-path mono">formlabs.app</span>
         </div>
         <a href="https://formlabs.com/">
-          <img src="assets/formlabs/formlabs.jpg" alt="Formlabs" onerror="this.src=''" />
+          <img src="/assets/formlabs/formlabs.jpg" alt="Formlabs" onerror="this.src=''" />
           <div class="image-overlay">
             <span>View Project</span>
           </div>
@@ -134,7 +98,7 @@
           <span>UX Research</span>
         </div>
         <h2 class="project-title">
-          <a href="vr/vr-campus.html">VR Campus Museum <span class="arrow">→</span></a>
+          <a href="/projects/vr/">VR Campus Museum <span class="arrow">→</span></a>
         </h2>
         <p class="project-desc">Empathy Byte — Making campus tour accessible through VR</p>
         <div class="project-meta mono">
@@ -147,8 +111,8 @@
           <span class="window-dot red"></span><span class="window-dot yellow"></span><span class="window-dot green"></span>
           <span class="window-path mono">vr-campus.app</span>
         </div>
-        <a href="vr/vr-campus.html">
-          <img src="assets/vr-cover.webp" alt="VR Campus Museum" onerror="this.src='https://placehold.co/600x380/1a1a1a/444?text=VR+Campus+Museum'" />
+        <a href="/projects/vr/">
+          <img src="/assets/vr-cover.webp" alt="VR Campus Museum" onerror="this.src='https://placehold.co/600x380/1a1a1a/444?text=VR+Campus+Museum'" />
           <div class="image-overlay">
             <span>View Project</span>
           </div>
@@ -165,7 +129,7 @@
           <span>Prototyping</span>
         </div>
         <h2 class="project-title">
-          <a href="spotify/spotify.html">Spotify Case Study <span class="arrow">→</span></a>
+          <a href="/projects/spotify/">Spotify Case Study <span class="arrow">→</span></a>
         </h2>
         <p class="project-desc">Improve user experience by integrating social components into Spotify</p>
         <div class="project-meta mono">
@@ -178,8 +142,8 @@
           <span class="window-dot red"></span><span class="window-dot yellow"></span><span class="window-dot green"></span>
           <span class="window-path mono">spotify-case-study.app</span>
         </div>
-        <a href="spotify/spotify.html">
-          <img src="assets/spotify/spotify-hero.png" alt="Spotify Case Study" onerror="this.src='https://placehold.co/600x380/0f0f0f/1DB954?text=Spotify+Case+Study'" />
+        <a href="/projects/spotify/">
+          <img src="/assets/spotify/spotify-hero.png" alt="Spotify Case Study" onerror="this.src='https://placehold.co/600x380/0f0f0f/1DB954?text=Spotify+Case+Study'" />
           <div class="image-overlay">
             <span>View Project</span>
           </div>
@@ -197,7 +161,7 @@
           <span>Ethnography</span>
         </div>
         <h2 class="project-title">
-          <a href="chess/rchess.html">r/Chess Community Study <span class="arrow">→</span></a>
+          <a href="/projects/chess/">r/Chess Community Study <span class="arrow">→</span></a>
         </h2>
         <p class="project-desc">What Makes Knowledge-Based Communities Successful — a deep-dive into Reddit's largest chess community</p>
         <div class="project-meta mono">
@@ -210,8 +174,8 @@
           <span class="window-dot red"></span><span class="window-dot yellow"></span><span class="window-dot green"></span>
           <span class="window-path mono">r-chess-study.app</span>
         </div>
-        <a href="chess/rchess.html">
-          <img src="assets/rchess.jpg" alt="r/Chess Community Study" onerror="this.src='https://placehold.co/600x380/0e0c09/c9a84c?text=r%2FChess+Community+Study'" />
+        <a href="/projects/chess/">
+          <img src="/assets/rchess.jpg" alt="r/Chess Community Study" onerror="this.src='https://placehold.co/600x380/0e0c09/c9a84c?text=r%2FChess+Community+Study'" />
           <div class="image-overlay">
             <span>View Project</span>
           </div>
@@ -230,7 +194,7 @@
           <span>React</span>
         </div>
         <h2 class="project-title">
-          <a href="duolingo/language-trends.html">Language Trends <span class="arrow">→</span></a>
+          <a href="/projects/duolingo/">Language Trends <span class="arrow">→</span></a>
         </h2>
         <p class="project-desc">Global Language Learning: Trends, Influences and the Role of Technology in Language Acquisition</p>
         <div class="project-meta mono">
@@ -243,8 +207,8 @@
           <span class="window-dot red"></span><span class="window-dot yellow"></span><span class="window-dot green"></span>
           <span class="window-path mono">language-trends.app</span>
         </div>
-        <a href="duolingo/language-trends.html">
-          <img src="assets/info-rizz-cover.webp" alt="Language Trends" onerror="this.src='https://placehold.co/600x380/0a0a2e/7b2fff?text=Language+Trends'" />
+        <a href="/projects/duolingo/">
+          <img src="/assets/info-rizz-cover.webp" alt="Language Trends" onerror="this.src='https://placehold.co/600x380/0a0a2e/7b2fff?text=Language+Trends'" />
           <div class="image-overlay">
             <span>View Project</span>
           </div>
@@ -274,14 +238,3 @@
       </div>
     </div>
   </section>
-
-  <footer>
-    <span>© 2026 aya kakizaki</span>
-    <span class="mono gh-footer-code">/* designed &amp; built with care */</span>
-  </footer>
-
-  </div>
-
-  <script src="script.js"></script>
-</body>
-</html>

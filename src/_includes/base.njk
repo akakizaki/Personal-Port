@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ title }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  {% for sheet in css %}
+  <link rel="stylesheet" href="{{ sheet }}" />
+  {% endfor %}
+</head>
+<body class="{{ bodyClass }}">
+  {% if lockScreen %}
+  <script>
+    window.SITE_LOCK_ENABLED = false; // set to true to re-enable the password gate
+    if (!window.SITE_LOCK_ENABLED || sessionStorage.getItem('site-unlocked') === 'true') {
+      document.body.classList.add('unlocked');
+    }
+  </script>
+
+  <!-- LOCK SCREEN -->
+  <div id="lock-screen" class="lock-screen">
+    <div class="lock-box">
+      <p class="lock-prompt"><span class="gh-prompt">&gt;_</span> enter password<span class="gh-cursor">|</span></p>
+      <form id="lock-form" class="lock-form" autocomplete="off">
+        <input type="password" id="lock-input" class="lock-input" placeholder="••••••••" autofocus />
+        <button type="submit" class="lock-btn">unlock →</button>
+      </form>
+      <p id="lock-error" class="lock-error"></p>
+    </div>
+  </div>
+
+  <div class="site-content">
+  {% endif %}
+
+  {% include "nav.njk" %}
+
+  {{ content | safe }}
+
+  {% include "footer.njk" %}
+
+  {% if lockScreen %}
+  </div>
+  {% endif %}
+
+  {% if script %}
+  <script src="{{ script }}"></script>
+  {% endif %}
+  {% if extraScript %}
+  <script>
+    {{ extraScript | safe }}
+  </script>
+  {% endif %}
+</body>
+</html>

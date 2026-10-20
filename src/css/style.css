@@ -61,14 +61,22 @@
   --border: #222;
   --text: #f0f0f0;
   --muted: #666;
-  --accent: #e8e0d5;
+  --accent: #ff8fd1;
   --tag-bg: #1c1c1c;
   --tag-text: #999;
-  --green: #a8c5a0;
+  --green: #ff8fd1;
   --radius: 16px;
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #1c1c22 transparent;
+}
+
+html::-webkit-scrollbar { width: 10px; }
+html::-webkit-scrollbar-track { background: transparent; }
+html::-webkit-scrollbar-thumb { background: #1c1c22; border-radius: 10px; }
 
 body {
   background: var(--bg);
@@ -88,8 +96,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 22px 48px;
-  background: rgba(10,10,10,0.85);
-  backdrop-filter: blur(12px);
+  background: var(--bg);
   border-bottom: 1px solid transparent;
   transition: border-color 0.3s;
 }
@@ -97,10 +104,23 @@ nav {
 nav.scrolled { border-color: var(--border); }
 
 .nav-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.02em;
   color: var(--text);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.nav-name::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 2px;
+  background: var(--accent);
+  flex-shrink: 0;
 }
 
 .nav-links {
@@ -118,7 +138,14 @@ nav.scrolled { border-color: var(--border); }
 }
 
 .nav-links a:hover,
-.nav-links a.active { color: var(--text); }
+.nav-links a.active { color: var(--accent); }
+
+.menu-clock {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
 
 /* ── HERO ── */
 .hero {
@@ -591,6 +618,7 @@ body.unlocked .site-content { display: block; }
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
   nav { padding: 18px 24px; }
+  .menu-clock { display: none; }
 
   .hero {
     flex-direction: column-reverse;

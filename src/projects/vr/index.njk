@@ -1,32 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VR Campus Museum — aya kakizaki</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../style.css" />
-  <link rel="stylesheet" href="../project/project.css" />
-  <link rel="stylesheet" href="vr-campus.css" />
-</head>
-<body class="project-page">
-
-  <!-- NAV -->
-  <nav class="scrolled">
-    <a href="../index.html" class="nav-name">&gt;_aya kakizaki</a>
-    <ul class="nav-links">
-      <li><a href="../index.html#work">work</a></li>
-      <li><a href="../about/about.html">about</a></li>
-      <li><a href="../resume.pdf" target="_blank">resume</a></li>
-    </ul>
-  </nav>
-
+---
+layout: base.njk
+title: VR Campus Museum — aya kakizaki
+bodyClass: project-page
+css:
+  - /css/project.css
+  - /css/vr-campus.css
+script: /js/project.js
+---
   <!-- HERO BANNER -->
   <div class="proj-hero">
     <img
-      src="../assets/vr/hero.webp"
+      src="/assets/vr/hero.webp"
       alt="VR Campus Museum"
       class="proj-hero-img"
       onerror="this.src='https://placehold.co/1400x560/111111/333333?text=VR+Campus+Museum'"
@@ -38,7 +22,7 @@
   <div class="proj-header">
     <div class="proj-header-inner">
       <div class="proj-back">
-        <a href="../index.html">← back</a>
+        <a href="/">← back</a>
       </div>
       <div class="proj-tags">
         <span>VR Development</span>
@@ -91,7 +75,7 @@
         <div class="cs-section-label">Project Overview</div>
         <h2 class="cs-heading">Virtual Reality Museum<br>at Georgia Tech</h2>
         <p>At Empathy Bytes, we are creating an immersive Virtual Reality Museum that brings the Georgia Tech Archives to life. This innovative project allows users to explore and learn about significant artifacts from the school's history — such as an official 1996 Atlanta Olympics Torch, Buzz's Converses from 1988, and a 1937 rat cap.</p>
-        
+
 
         <div class="cs-video-wrapper">
           <iframe
@@ -102,16 +86,16 @@
           </iframe>
         </div>
 
-        
-        
+
+
         <p>Using advanced photogrammetry and hand-modeling techniques, our team digitally preserves these items, ensuring their legacy is accessible to all. Designed to mimic the experience of a campus tour, the VR Museum provides a unique opportunity for the Georgia Tech community to deepen its connection to the school's rich past, regardless of physical location.</p>
 
         <div class="cs-image-grid two-col">
           <figure>
-            <img src="../assets/vr/overview1.webp" alt="VR museum interior" onerror="this.src='https://placehold.co/540x360/111/222?text=VR+Interior'" />
+            <img src="/assets/vr/overview1.webp" alt="VR museum interior" onerror="this.src='https://placehold.co/540x360/111/222?text=VR+Interior'" />
           </figure>
           <figure>
-            <img src="../assets/vr/overview2.avif" alt="3D scanned artifacts" onerror="this.src='https://placehold.co/540x360/111/222?text=3D+Artifacts'" />
+            <img src="/assets/vr/overview2.avif" alt="3D scanned artifacts" onerror="this.src='https://placehold.co/540x360/111/222?text=3D+Artifacts'" />
           </figure>
         </div>
 
@@ -129,11 +113,11 @@
 
         <div class="cs-image-grid two-col">
           <figure>
-            <img src="../assets/vr/user-research1.avif" alt="artifact scan" onerror="this.src='https://placehold.co/540x360/111/222?text=Research+Session'" />
+            <img src="/assets/vr/user-research1.avif" alt="artifact scan" onerror="this.src='https://placehold.co/540x360/111/222?text=Research+Session'" />
             <figcaption>// early photogrammetry scans of campus artifacts</figcaption>
           </figure>
           <figure>
-            <img src="../assets/vr/user-research2.webp" alt="Artifact scan" onerror="this.src='https://placehold.co/540x360/111/222?text=Artifact+Scan'" />
+            <img src="/assets/vr/user-research2.webp" alt="Artifact scan" onerror="this.src='https://placehold.co/540x360/111/222?text=Artifact+Scan'" />
             <figcaption>// assets that allow users to teleport to new locations</figcaption>
           </figure>
         </div>
@@ -189,7 +173,7 @@
               <strong>Interaction diversity</strong>
             </div>
             <p>Participants interacted with the same object in different ways (e.g., holding a viola by the neck, body, or bow), highlighting the need for flexible gesture recognition.</p>
-          </div>
+            </div>
           <div class="finding">
             <div class="finding-header">
               <span class="finding-icon">⚠</span>
@@ -240,11 +224,11 @@
 
         <div class="cs-image-grid two-col">
           <figure>
-            <img src="../assets/vr/improvement1.avif" alt="Shader highlighting" onerror="this.src='https://placehold.co/540x360/111/222?text=Shader+Highlighting'" />
+            <img src="/assets/vr/improvement1.avif" alt="Shader highlighting" onerror="this.src='https://placehold.co/540x360/111/222?text=Shader+Highlighting'" />
             <figcaption>Shader-based discoverability indicators on interactable objects</figcaption>
           </figure>
           <figure>
-            <img src="../assets/vr/improvement2.avif" alt="Locomotion system" onerror="this.src='https://placehold.co/540x360/111/222?text=Locomotion+System'" />
+            <img src="/assets/vr/improvement2.avif" alt="Locomotion system" onerror="this.src='https://placehold.co/540x360/111/222?text=Locomotion+System'" />
             <figcaption>Revised locomotion and gesture detection interface</figcaption>
           </figure>
         </div>
@@ -290,21 +274,21 @@
 
         <div class="cs-image-grid two-col">
           <figure>
-            <img src="../assets/vr/team.avif" alt="team picture" onerror="" />
+            <img src="/assets/vr/team.avif" alt="team picture" onerror="" />
             <figcaption>// 2025 spring team picture</figcaption>
           </figure>
           <figure>
-            <img src="../assets/vr/demo1.avif" alt="headset demo session"/>
+            <img src="/assets/vr/demo1.avif" alt="headset demo session"/>
             <figcaption>// headset session for user testing</figcaption>
           </figure>
         </div>
         <div class="cs-image-grid two-col">
           <figure>
-            <img src="../assets/vr/demo3.avif" alt="user testing" onerror="" />
+            <img src="/assets/vr/demo3.avif" alt="user testing" onerror="" />
             <figcaption>// headset session for user testing</figcaption>
           </figure>
           <figure>
-            <img src="../assets/vr/demo2.avif" alt="headset demo session"/>
+            <img src="/assets/vr/demo2.avif" alt="headset demo session"/>
             <figcaption>// headset session for user testing</figcaption>
           </figure>
         </div>
@@ -314,19 +298,10 @@
       <!-- NEXT PROJECT -->
       <div class="proj-next">
         <span class="proj-next-label">next project</span>
-        <a href="../spotify/spotify.html" class="proj-next-link">
+        <a href="/projects/spotify/" class="proj-next-link">
           Spotify Case Study <span>→</span>
         </a>
       </div>
 
     </main>
   </div>
-
-  <footer>
-    <span>© 2026 aya kakizaki</span>
-    <span>designed & built with care</span>
-  </footer>
-
-  <script src="../project/project.js"></script>
-</body>
-</html>
