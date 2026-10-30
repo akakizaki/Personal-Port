@@ -9,59 +9,31 @@ script: /js/main.js
 ---
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-window">
-      <div class="window-bar rice-bar">
-        <div class="rice-bar-left">
-          <span class="window-dot red"></span><span class="window-dot yellow"></span><span class="window-dot green"></span>
-          <span class="workspace-badge mono">⊞ MAIN</span>
-          <span class="window-path mono active-tab">~/aya/home.sh</span>
-        </div>
-        <div class="rice-bar-right mono">
-          <span class="rice-stat"><span class="rice-stat-icon">🕐</span><span class="rice-clock"></span></span>
-          <span class="rice-divider">❮</span>
-          <span class="rice-stat"><span class="rice-stat-icon">⏱</span><span class="rice-uptime">0m 00s</span></span>
-        </div>
+    <div class="hero-text">
+      <p class="hero-greeting"><span class="gh-prompt">&gt;_</span> hi, i'm <span class="accent">aya</span><span class="gh-cursor">|</span></p>
+      <h1 class="hero-title">
+        <span class="em-dash">—</span> developer<br>&amp; designer
+      </h1>
+      <p class="hero-sub">UX Engineer <span class="at">@</span> Formlabs · open to new opportunities</p>
+      <div class="hero-tags">
+        <span>HCI</span>
+        <span>UX</span>
+        <span>Full Stack Dev</span>
+        <span>AI Interaction Design</span>
       </div>
-      <div class="window-body hero-window-body">
-        <div class="hero-photo">
-          <div class="photo-frame">
-            <svg class="avatar-placeholder" viewBox="0 0 200 200" aria-hidden="true">
-              <circle cx="100" cy="80" r="32" stroke="currentColor" stroke-width="4" fill="none" />
-              <path d="M44 172c8-46 38-66 56-66s48 20 56 66" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round" />
-            </svg>
-          </div>
-        </div>
-        <div class="hero-info">
-          <p class="hero-greeting"><span class="gh-prompt">&gt;_</span> hi, i'm <span class="accent">aya</span><span class="gh-cursor">|</span></p>
-          <h1 class="hero-title">
-            <span class="em-dash">—</span> developer<br>&amp; designer
-          </h1>
-          <div class="fetch-block mono">
-            <p class="fetch-header">System:</p>
-            <p class="fetch-row"><span class="tree">├</span><span class="fetch-label">Role</span><span class="fetch-value">UX Engineer @Formlabs</span></p>
-            <p class="fetch-row"><span class="tree">├</span><span class="fetch-label">Focus</span><span class="fetch-value">HCI · UX · Full Stack Dev · AI Interaction Design</span></p>
-            <p class="fetch-row"><span class="tree">└</span><span class="fetch-label">Status</span><span class="fetch-value">Open to new opportunities</span></p>
-          </div>
-          <div class="dots-row">
-            <span class="dot d1"></span><span class="dot d2"></span><span class="dot d3"></span><span class="dot d4"></span><span class="dot d5"></span><span class="dot d6"></span><span class="dot d7"></span>
-          </div>
-        </div>
+    </div>
+    <div class="hero-photo">
+      <div class="photo-ring">
+        <img src="/assets/pfp.webp" alt="aya kakizaki"
+          onerror="this.style.display='none';this.parentElement.classList.add('no-img')" />
       </div>
+      <div class="photo-decoration"></div>
     </div>
   </section>
-
-  <!-- MARQUEE -->
-  <!-- <div class="marquee-wrap">
-    <div class="marquee-track">
-      <span><span class="marquee-prompt">$</span> UX Design &nbsp;·&nbsp; Prototyping &nbsp;·&nbsp; React &nbsp;·&nbsp; Figma &nbsp;·&nbsp; User Research &nbsp;·&nbsp; D3.js &nbsp;·&nbsp; Unity &nbsp;·&nbsp; HTML/CSS &nbsp;·&nbsp; Accessibility &nbsp;·&nbsp; VR &nbsp;·&nbsp;</span>
-      <span><span class="marquee-prompt">$</span> UX Design &nbsp;·&nbsp; Prototyping &nbsp;·&nbsp; React &nbsp;·&nbsp; Figma &nbsp;·&nbsp; User Research &nbsp;·&nbsp; D3.js &nbsp;·&nbsp; Unity &nbsp;·&nbsp; HTML/CSS &nbsp;·&nbsp; Accessibility &nbsp;·&nbsp; VR &nbsp;·&nbsp;</span>
-    </div>
-  </div> -->
 
   <!-- WORK -->
   <section class="work" id="work">
     <div class="section-label"><span class="gh-comment">// </span>selected_work</div>
-
 
     <!-- Project 1 -->
     <article class="project" data-index="01">
@@ -76,16 +48,12 @@ script: /js/main.js
           <a href="/projects/formlabs/">Formlabs <span class="arrow">→</span></a>
         </h2>
         <p class="project-desc">Improving self-service experience</p>
-        <div class="project-meta mono">
-          <p class="fetch-row"><span class="tree">├</span><span class="fetch-label">Year</span><span class="fetch-value">2025–Present</span></p>
-          <p class="fetch-row"><span class="tree">└</span><span class="fetch-label">Role</span><span class="fetch-value">UX Engineer</span></p>
+        <div class="project-meta">
+          <span class="year">2025–Present</span>
+          <span class="type">UX Engineer</span>
         </div>
       </div>
       <div class="project-image">
-        <div class="window-bar">
-          <span class="window-dot red"></span><span class="window-dot yellow"></span><span class="window-dot green"></span>
-          <span class="window-path mono">formlabs.app</span>
-        </div>
         <a href="/projects/formlabs/">
           <img src="/assets/formlabs/formlabs.jpg" alt="Formlabs" onerror="this.src=''" />
           <div class="image-overlay">
@@ -96,7 +64,7 @@ script: /js/main.js
     </article>
 
     <!-- Project 2 -->
-    <article class="project" data-index="01">
+    <article class="project" data-index="02">
       <div class="project-info">
         <div class="project-tags">
           <span>VR Development</span>
@@ -109,16 +77,12 @@ script: /js/main.js
           <a href="/projects/vr/">VR Campus Museum <span class="arrow">→</span></a>
         </h2>
         <p class="project-desc">Empathy Byte — Making campus tour accessible through VR</p>
-        <div class="project-meta mono">
-          <p class="fetch-row"><span class="tree">├</span><span class="fetch-label">Year</span><span class="fetch-value">2024–2025</span></p>
-          <p class="fetch-row"><span class="tree">└</span><span class="fetch-label">Role</span><span class="fetch-value">Undergraduate Research</span></p>
+        <div class="project-meta">
+          <span class="year">2024–2025</span>
+          <span class="type">Undergraduate Research</span>
         </div>
       </div>
       <div class="project-image">
-        <div class="window-bar">
-          <span class="window-dot red"></span><span class="window-dot yellow"></span><span class="window-dot green"></span>
-          <span class="window-path mono">vr-campus.app</span>
-        </div>
         <a href="/projects/vr/">
           <img src="/assets/vr-cover.webp" alt="VR Campus Museum" onerror="this.src='https://placehold.co/600x380/1a1a1a/444?text=VR+Campus+Museum'" />
           <div class="image-overlay">
@@ -129,7 +93,7 @@ script: /js/main.js
     </article>
 
     <!-- Project 3 -->
-    <article class="project" data-index="02">
+    <article class="project" data-index="03">
       <div class="project-info">
         <div class="project-tags">
           <span>Figma</span>
@@ -140,16 +104,12 @@ script: /js/main.js
           <a href="/projects/spotify/">Spotify Case Study <span class="arrow">→</span></a>
         </h2>
         <p class="project-desc">Improve user experience by integrating social components into Spotify</p>
-        <div class="project-meta mono">
-          <p class="fetch-row"><span class="tree">├</span><span class="fetch-label">Year</span><span class="fetch-value">2024</span></p>
-          <p class="fetch-row"><span class="tree">└</span><span class="fetch-label">Role</span><span class="fetch-value">Product Design</span></p>
+        <div class="project-meta">
+          <span class="year">2024</span>
+          <span class="type">Product Design</span>
         </div>
       </div>
       <div class="project-image">
-        <div class="window-bar">
-          <span class="window-dot red"></span><span class="window-dot yellow"></span><span class="window-dot green"></span>
-          <span class="window-path mono">spotify-case-study.app</span>
-        </div>
         <a href="/projects/spotify/">
           <img src="/assets/spotify/spotify-hero.png" alt="Spotify Case Study" onerror="this.src='https://placehold.co/600x380/0f0f0f/1DB954?text=Spotify+Case+Study'" />
           <div class="image-overlay">
@@ -159,8 +119,8 @@ script: /js/main.js
       </div>
     </article>
 
-        <!-- Project 4 -->
-    <article class="project" data-index="05">
+    <!-- Project 4 -->
+    <article class="project" data-index="04">
       <div class="project-info">
         <div class="project-tags">
           <span>UX Research</span>
@@ -172,16 +132,12 @@ script: /js/main.js
           <a href="/projects/chess/">r/Chess Community Study <span class="arrow">→</span></a>
         </h2>
         <p class="project-desc">What Makes Knowledge-Based Communities Successful — a deep-dive into Reddit's largest chess community</p>
-        <div class="project-meta mono">
-          <p class="fetch-row"><span class="tree">├</span><span class="fetch-label">Year</span><span class="fetch-value">2022</span></p>
-          <p class="fetch-row"><span class="tree">└</span><span class="fetch-label">Role</span><span class="fetch-value">UX Research</span></p>
+        <div class="project-meta">
+          <span class="year">2022</span>
+          <span class="type">UX Research</span>
         </div>
       </div>
       <div class="project-image">
-        <div class="window-bar">
-          <span class="window-dot red"></span><span class="window-dot yellow"></span><span class="window-dot green"></span>
-          <span class="window-path mono">r-chess-study.app</span>
-        </div>
         <a href="/projects/chess/">
           <img src="/assets/rchess.jpg" alt="r/Chess Community Study" onerror="this.src='https://placehold.co/600x380/0e0c09/c9a84c?text=r%2FChess+Community+Study'" />
           <div class="image-overlay">
@@ -192,7 +148,7 @@ script: /js/main.js
     </article>
 
     <!-- Project 5 -->
-    <article class="project" data-index="04">
+    <article class="project" data-index="05">
       <div class="project-info">
         <div class="project-tags">
           <span>Javascript</span>
@@ -205,16 +161,12 @@ script: /js/main.js
           <a href="/projects/duolingo/">Language Trends <span class="arrow">→</span></a>
         </h2>
         <p class="project-desc">Global Language Learning: Trends, Influences and the Role of Technology in Language Acquisition</p>
-        <div class="project-meta mono">
-          <p class="fetch-row"><span class="tree">├</span><span class="fetch-label">Year</span><span class="fetch-value">2024</span></p>
-          <p class="fetch-row"><span class="tree">└</span><span class="fetch-label">Role</span><span class="fetch-value">Data Visualization</span></p>
+        <div class="project-meta">
+          <span class="year">2024</span>
+          <span class="type">Data Visualization</span>
         </div>
       </div>
       <div class="project-image">
-        <div class="window-bar">
-          <span class="window-dot red"></span><span class="window-dot yellow"></span><span class="window-dot green"></span>
-          <span class="window-path mono">language-trends.app</span>
-        </div>
         <a href="/projects/duolingo/">
           <img src="/assets/info-rizz-cover.webp" alt="Language Trends" onerror="this.src='https://placehold.co/600x380/0a0a2e/7b2fff?text=Language+Trends'" />
           <div class="image-overlay">
@@ -224,25 +176,17 @@ script: /js/main.js
       </div>
     </article>
 
-
-
   </section>
 
   <!-- FOOTER CTA -->
   <section class="cta">
     <div class="cta-inner">
-      <div class="window-bar">
-        <span class="window-dot red"></span><span class="window-dot yellow"></span><span class="window-dot green"></span>
-        <span class="window-path mono">~/aya/contact.sh</span>
-      </div>
-      <div class="window-body">
-        <p class="cta-label"><span class="gh-comment">// </span>let's_connect</p>
-        <h2 class="cta-heading">Open to new opportunities<br>& collaborations</h2>
-        <a href="mailto:ayakakiz512@gmail.com" class="cta-btn">say hello →</a>
-        <div class="cta-links">
-          <a href="https://github.com/" target="_blank">github</a>
-          <a href="www.linkedin.com/in/aya-kakizaki-a93058202" target="_blank">linkedin</a>
-        </div>
+      <p class="cta-label"><span class="gh-comment">// </span>let's_connect</p>
+      <h2 class="cta-heading">Open to new opportunities<br>& collaborations</h2>
+      <a href="mailto:ayakakiz512@gmail.com" class="cta-btn">say hello →</a>
+      <div class="cta-links">
+        <a href="https://github.com/" target="_blank">github</a>
+        <a href="www.linkedin.com/in/aya-kakizaki-a93058202" target="_blank">linkedin</a>
       </div>
     </div>
   </section>
